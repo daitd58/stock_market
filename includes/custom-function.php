@@ -8,8 +8,7 @@
 
 // Siteorigin include widget folder
 function stock_market_widgets( $folders ) {
-    $folders[] = get_template_directory() . 'widgets';
-
+    $folders[] = get_template_directory() . '/includes/widgets/';
     return $folders;
 }
 
@@ -25,3 +24,5 @@ function stock_market_add_widget_tabs( $tabs ) {
         );
     return $tabs;
 }
+
+add_filter('siteorigin_panels_widget_dialog_tabs', 'stock_market_add_widget_tabs', 20);
