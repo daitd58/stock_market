@@ -444,6 +444,4 @@ function stock_market_wp_example_sidebar(){
     echo '</div>';
 }
 
-?>
-
-include "includes/custom-functions.php";
+include "includes/custom-function.php";
