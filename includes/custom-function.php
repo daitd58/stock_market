@@ -8,7 +8,7 @@
 
 // Siteorigin include widget folder
 function stock_market_widgets( $folders ) {
-    $folders[] = get_template_directory() . '/includes/widgets/';
+    $folders[] = get_template_directory() . 'widgets';
 
     return $folders;
 }
