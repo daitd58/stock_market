@@ -23,7 +23,7 @@
         }).then(function(response) {
             var range = response.result;
             var data = [];
-            $('#myChart').removeClass('loading');
+            $('#myChart').removeClass('chart_loading');
             if (range.values.length > 0) {
                 for (i = 0; i < range.values.length; i++) {
                     data[i] = range.values[i];
