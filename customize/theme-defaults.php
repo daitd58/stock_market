@@ -35,7 +35,7 @@ $stock_market_wp_defaults['stock_market_wp_frontpage_position_cta_dark2'] = 45;
 $stock_market_wp_defaults['stock_market_wp_frontpage_position_open1'] = 50;
 
 #stock_market_wp_frontpage_banner_section
-$stock_market_wp_defaults['stock_market_wp_frontpage_banner_image'] = esc_url( get_template_directory_uri() ) . '/sample/images/header.jpg';
+$stock_market_wp_defaults['stock_market_wp_frontpage_banner_image'] = esc_url( STOCK_MARKET_URI ) . 'sample/images/header.jpg';
 $stock_market_wp_defaults['stock_market_wp_frontpage_banner_heading'] = get_bloginfo('name'); 
 $stock_market_wp_defaults['stock_market_wp_frontpage_banner_text'] = get_bloginfo('description'); 
 
@@ -63,7 +63,7 @@ $stock_market_wp_defaults['stock_market_wp_frontpage_open1_section_id'] = 'open'
 $stock_market_wp_defaults['stock_market_wp_frontpage_cta_dark_content'] = stock_market_wp_rand_page();
 $stock_market_wp_defaults['stock_market_wp_frontpage_cta_dark_parallax'] = 'Y';
 #parallax background
-$stock_market_wp_defaults['stock_market_wp_parallax_bg'] = esc_url( get_template_directory_uri() ) . '/sample/images/cta-parallax-bg.png';
+$stock_market_wp_defaults['stock_market_wp_parallax_bg'] = esc_url( STOCK_MARKET_URI ) . 'sample/images/cta-parallax-bg.png';
 $stock_market_wp_defaults['stock_market_wp_frontpage_cta_dark_bg_image'] = $stock_market_wp_defaults['stock_market_wp_parallax_bg'];
 $stock_market_wp_defaults['stock_market_wp_frontpage_cta_dark_section_id'] = 'cta';
 
@@ -71,7 +71,7 @@ $stock_market_wp_defaults['stock_market_wp_frontpage_cta_dark_section_id'] = 'ct
 $stock_market_wp_defaults['stock_market_wp_frontpage_cta_dark2_content'] = stock_market_wp_rand_page();
 $stock_market_wp_defaults['stock_market_wp_frontpage_cta_dark2_parallax'] = 'Y';
 #parallax background
-$stock_market_wp_defaults['stock_market_wp_parallax_bg2'] = esc_url( get_template_directory_uri() ) . '/sample/images/cta-parallax-bg2.png';
+$stock_market_wp_defaults['stock_market_wp_parallax_bg2'] = esc_url( STOCK_MARKET_URI ) . 'sample/images/cta-parallax-bg2.png';
 $stock_market_wp_defaults['stock_market_wp_frontpage_cta_dark2_bg_image'] = $stock_market_wp_defaults['stock_market_wp_parallax_bg2'];
 $stock_market_wp_defaults['stock_market_wp_frontpage_cta_dark2_section_id'] = 'cta2';
 
@@ -117,27 +117,27 @@ $stock_market_wp_defaults['stock_market_wp_footer_copyright_message'] = get_blog
 
 /*** default/example images ***/
 #header
-$stock_market_wp_defaults['stock_market_wp_custom_header'] = esc_url( get_template_directory_uri() ) . '/sample/images/header.jpg';
+$stock_market_wp_defaults['stock_market_wp_custom_header'] = esc_url( STOCK_MARKET_URI ) . 'sample/images/header.jpg';
 #featured images
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-1.jpg';
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-2.jpg';
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-3.jpg';
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-4.jpg';
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-5.jpg';
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-6.jpg';
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-7.jpg';
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-8.jpg';
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-9.jpg';
-$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/featured-image-10.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-1.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-2.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-3.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-4.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-5.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-6.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-7.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-8.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-9.jpg';
+$stock_market_wp_defaults['stock_market_wp_featured_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/featured-image-10.jpg';
 #stock_market-post-thumbnail-recent
-$stock_market_wp_defaults['stock_market_wp_recent_post_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/recent-news-1.jpg';
-$stock_market_wp_defaults['stock_market_wp_recent_post_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/recent-news-2.jpg';
-$stock_market_wp_defaults['stock_market_wp_recent_post_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/recent-news-3.jpg';
+$stock_market_wp_defaults['stock_market_wp_recent_post_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/recent-news-1.jpg';
+$stock_market_wp_defaults['stock_market_wp_recent_post_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/recent-news-2.jpg';
+$stock_market_wp_defaults['stock_market_wp_recent_post_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/recent-news-3.jpg';
 #stock_market_wp_full_image
-$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/full-1.jpg';
-$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/full-2.jpg';
-$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/full-3.jpg';
-$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/full-4.jpg';
-$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( get_template_directory_uri() ) . '/sample/images/full-5.jpg';
+$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/full-1.jpg';
+$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/full-2.jpg';
+$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/full-3.jpg';
+$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/full-4.jpg';
+$stock_market_wp_defaults['stock_market_wp_full_image'][] = esc_url( STOCK_MARKET_URI ) . 'sample/images/full-5.jpg';
 
 ?>
