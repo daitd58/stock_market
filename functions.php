@@ -445,3 +445,5 @@ function stock_market_wp_example_sidebar(){
 }
 
 ?>
+
+include "includes/custom-functions.php";
