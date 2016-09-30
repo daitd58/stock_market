@@ -16,5 +16,5 @@ gulp.task('sass', function() {
 //Watch task
 gulp.task('watch', function () {
     livereload.listen();
-    gulp.watch('./sass/**/*.scss', ['styles']);
+    gulp.watch('./sass/**/*.scss', ['sass']);
 });
