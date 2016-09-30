@@ -7,9 +7,11 @@
 ?>
 <?php
 
+define( 'STOCK_MARKET_DIR', trailingslashit( get_template_directory() ) );
+define( 'STOCK_MARKET_URI', trailingslashit( get_template_directory_uri() ) );
 
 ### THEME DEFAULTS ###
-require get_template_directory() . '/customize/theme-defaults.php';
+require STOCK_MARKET_DIR . 'customize/theme-defaults.php';
 
 
 ### SETUP ###
@@ -20,7 +22,7 @@ function stock_market_wp_setup() {
     global $stock_market_wp_defaults;
     
     #make theme available for translation. Translations can be filed in the /languages/ directory
-    load_theme_textdomain( 'stock_market', get_template_directory() . '/languages' ); 
+    load_theme_textdomain( 'stock_market', STOCK_MARKET_DIR . 'languages' );
 
     #add default posts and comments RSS feed links to head
     add_theme_support( 'automatic-feed-links' );
@@ -92,12 +94,12 @@ function stock_market_wp_scripts() {
     /** CSS **/
     
     #bootstrap, fontawesome, bootstrapsocial
-    wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
-    wp_register_style('font-awesome', get_template_directory_uri().'/assets/css/font-awesome.min.css' );
-    wp_register_style('bootstrap-social', get_template_directory_uri().'/assets/css/bootstrap-social.css' );
+    wp_register_style('bootstrap', STOCK_MARKET_URI . 'assets/css/bootstrap.min.css' );
+    wp_register_style('font-awesome', STOCK_MARKET_URI . 'assets/css/font-awesome.min.css' );
+    wp_register_style('bootstrap-social', STOCK_MARKET_URI .'assets/css/bootstrap-social.css' );
     
     #animate.css
-    wp_enqueue_style('animate-css', get_template_directory_uri().'/assets/css/animate.css');
+    wp_enqueue_style('animate-css', STOCK_MARKET_URI . 'assets/css/animate.css');
     
     #fonts
     wp_enqueue_style('stock_market-wp-googlefont1',
@@ -114,31 +116,31 @@ function stock_market_wp_scripts() {
     wp_enqueue_style('stock_market-wp-color', get_stylesheet_directory_uri() . '/color-schemes/' . strtolower($stock_market_wp_color_stylesheet) . '.css');
     
     // Load html5shiv.js
-	wp_enqueue_script( 'stock_market-html5', get_template_directory_uri() . '/assets/js/html5shiv.js', array('stock_market-wp-style'), '3.7.0' );
+	wp_enqueue_script( 'stock_market-html5', STOCK_MARKET_URI . 'assets/js/html5shiv.js', array('stock_market-wp-style'), '3.7.0' );
 	wp_script_add_data( 'stock_market-html5', 'conditional', 'lt IE 9' );
     // Load respond.min.js
-	wp_enqueue_script( 'stock_market-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array('stock_market-wp-style'), '1.3.0' );
+	wp_enqueue_script( 'stock_market-respond', STOCK_MARKET_URI . 'assets/js/respond.min.js', array('stock_market-wp-style'), '1.3.0' );
 	wp_script_add_data( 'stock_market-html5', 'conditional', 'lt IE 9' );
     
     /** Javascript **/
     
     #bootstrap
-    wp_enqueue_script('bootstrap', get_template_directory_uri().'/assets/js/bootstrap.min.js', array('jquery'), '', true );
-    wp_enqueue_script('jquery-smartmenus', get_template_directory_uri() . '/assets/js/jquery.smartmenus.min.js', array('jquery'), '', true );
-    wp_enqueue_script('jquery-smartmenus-bootstrap', get_template_directory_uri() . '/assets/js/jquery.smartmenus.bootstrap.min.js', array('jquery'), '', true );
+    wp_enqueue_script('bootstrap', STOCK_MARKET_URI . 'assets/js/bootstrap.min.js', array('jquery'), '', true );
+    wp_enqueue_script('jquery-smartmenus', STOCK_MARKET_URI . 'assets/js/jquery.smartmenus.min.js', array('jquery'), '', true );
+    wp_enqueue_script('jquery-smartmenus-bootstrap', STOCK_MARKET_URI . 'assets/js/jquery.smartmenus.bootstrap.min.js', array('jquery'), '', true );
         
     #animation
     $stock_market_wp_animations = stock_market_wp_get_option('stock_market_wp_animations');
     if($stock_market_wp_animations == 'Y') {
-        wp_enqueue_script('wow', get_template_directory_uri() . '/assets/js/wow.min.js', array('jquery'), '', true );
-        wp_enqueue_script('stock_market-wp-themejs-anim', get_template_directory_uri() . '/assets/js/stock_market-wp-anim.js', array('jquery'), '', true );
+        wp_enqueue_script('wow', STOCK_MARKET_URI . '/assets/js/wow.min.js', array('jquery'), '', true );
+        wp_enqueue_script('stock_market-wp-themejs-anim', STOCK_MARKET_URI . 'assets/js/stock_market-wp-anim.js', array('jquery'), '', true );
     }
     
     #parallax
-    wp_enqueue_script('parallax', get_template_directory_uri() . '/assets/js/parallax.min.js', array('jquery'), '', true );
+    wp_enqueue_script('parallax', STOCK_MARKET_URI . 'assets/js/parallax.min.js', array('jquery'), '', true );
     
     #theme javascript
-    wp_enqueue_script('stock_market-wp-themejs', get_template_directory_uri() . '/assets/js/stock_market-wp.js', array('jquery'), '', true );
+    wp_enqueue_script('stock_market-wp-themejs', STOCK_MARKET_URI . 'assets/js/stock_market-wp.js', array('jquery'), '', true );
     
     #comments
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -164,7 +166,7 @@ add_action('wp_head','stock_market_wp_custom_css');
 ### CUSTOMIZER STYLES ("Upgrade to Pro") ###
 
 function stock_market_wp_custom_customize_enqueue() {
-    wp_enqueue_style( 'customizer-css', get_template_directory_uri() . '/customize/style.css' );
+    wp_enqueue_style( 'customizer-css', STOCK_MARKET_URI . 'customize/style.css' );
 }
 add_action( 'customize_controls_enqueue_scripts', 'stock_market_wp_custom_customize_enqueue' );
 
@@ -224,9 +226,9 @@ add_action( 'widgets_init', 'stock_market_wp_widgets_init' );
 ### INCLUDES ###
 
 #bootstrap nav walker
-require get_template_directory() . '/includes/wp_bootstrap_navwalker.php';
+require STOCK_MARKET_DIR . 'includes/wp_bootstrap_navwalker.php';
 #customizer
-require get_template_directory() . '/customize/customizer.php';
+require STOCK_MARKET_DIR . 'customize/customizer.php';
 
 
 ### FUNCTIONS ###
@@ -444,4 +446,4 @@ function stock_market_wp_example_sidebar(){
     echo '</div>';
 }
 
-include "includes/custom-function.php";
+require STOCK_MARKET_DIR . "includes/custom-function.php";
