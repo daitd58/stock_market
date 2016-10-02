@@ -26,7 +26,7 @@
             
             <!-- Logo -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>
+                <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></button>-->
                 <?php get_template_part('parts/header', 'logo'); ?>
             </div>
             <!-- /Logo -->

@@ -232,7 +232,7 @@ a.navbar-brand.text-logo { text-transform: uppercase; font-weight: bold; font-si
 
 @media (max-width: 767px) {
     .navbar-custom {
-        top: 46px;
+        //top: 46px;
     }
 }
 
