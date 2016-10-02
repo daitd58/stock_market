@@ -1,0 +1,80 @@
+$font-family: "Open Sans";
+$text-size: 16px;
+$text-color: #eee;
+$heading-size: 20px;
+$heading-color: #fff;
+.footer-widgets {
+	*:hover {
+		transition: 0.7s;
+	}
+	font-family: $font-family;
+	font-size: $text-size !important;
+	color: $text-color;
+	background-color: #363636 !important;
+
+	.heading {
+		font-size: $heading-size;
+		color: $heading-color;
+		margin-bottom: 35px;
+	}
+	.stock-market-footer-info {
+		.text-logo {margin-bottom: 30px;}
+	}
+
+	.contact-info {
+		div {
+			margin-bottom: 15px;
+		}
+		.fa {
+			margin-right: 10px;
+		}
+	}
+
+
+	a {
+		text-decoration: none;
+		color: $text-color;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	.social-info {
+		.social {display: inline-block}
+		margin-top: 30px;
+		i.fa {
+			border: 10px solid #2b2b2b;
+			border-radius: 50%;
+			font-size: 20px;
+			background-color: #2b2b2b;
+			color: #fff;
+			margin-right: 15px;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			&:hover {
+				border-color: $primary-color;
+				background-color: $primary-color;
+			}
+		}
+	}
+
+	.stock-market-stock-ticker {
+		i {margin-right: 10px;}
+		.post-title {line-height: 36px;}
+	}
+
+	.stock-market-our-work {
+		margin-bottom: 55px;
+		img {
+			width: 70px;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+		a {
+			margin-right: 15px;
+			margin-bottom: 15px;
+		}
+	}
+}

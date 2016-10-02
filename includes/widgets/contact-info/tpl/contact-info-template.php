@@ -9,7 +9,7 @@ $gg_plus = isset($instance['social_info']['gg_plus']) ? $instance['social_info']
 ?>
 
 <div class="stock-market-contact-info">
-    <div class="heading"><?php echo $heading ?></div>
+    <h3 class="heading"><?php echo $heading ?></h3>
     <div class="contact-info">
         <div class="phone">
             <i class="fa fa-phone"></i>
@@ -25,19 +25,25 @@ $gg_plus = isset($instance['social_info']['gg_plus']) ? $instance['social_info']
         </div>
     </div>
     <div class="social-info">
+        <div class="social facebook">
+            <a class="link-facebook" href="<?php echo $facebook ?>">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </div>
 
-        <a class="link-facebook" href="<?php echo $facebook ?>">
-            <i class="fa fa-facebook"></i>
-        </a>
-
-        <a class="link-twitter" href="<?php echo $twitter ?>">
-            <i class="fa fa-twitter"></i>
-        </a>
+        <div class="social twitter">
+            <a class="link-twitter" href="<?php echo $twitter ?>">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </div>
 
 
-        <a class="link-google-plus" href="<?php echo $gg_plus ?>">
-            <i class="fa fa-google-plus"></i>
-        </a>
+        <div class="social google-plus">
+            <a class="link-google-plus" href="<?php echo $gg_plus ?>">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </div>
+
 
     </div>
 </div>

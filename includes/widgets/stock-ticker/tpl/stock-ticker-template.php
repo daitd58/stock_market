@@ -1,9 +1,9 @@
 <?php $heading = isset($instance['heading']) ? $instance['heading'] : 'Our Work'; ?>
 <?php $quantity = isset($instance['quantity']) ? $instance['quantity'] : '5'; ?>
-<div class="stock-market-our-work">
-    <div class="heading">
+<div class="stock-market-stock-ticker">
+    <h3 class="heading">
         <?php echo $heading ?>
-    </div>
+    </h3>
     <div class="content">
         <?php
         $args = array('numberposts' => $quantity);
@@ -11,6 +11,7 @@
         foreach ($recent_posts as $recent) {
             ?>
             <div class="post-title">
+                <i class="fa fa-send"></i>
                 <a href="<?php echo get_permalink($recent['ID']) ?>">
                     <?php echo $recent['post_title'] ?>
                 </a>
