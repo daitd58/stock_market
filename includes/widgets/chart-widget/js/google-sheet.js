@@ -11,7 +11,6 @@
         if ($('.chart_loading').is('#lineChart')) {
             var id = $('#lineChart').data('id');
             var range = $('#lineChart').data('range');
-            var title = $('#lineChart').data('title');
             gapi.client.sheets.spreadsheets.values.get({
                 spreadsheetId: id,
                 range: range,
@@ -30,10 +29,16 @@
                         data: {
                             labels: data[0],
                             datasets: [{
-                                label: '# of Votes',
+                                label: 'a',
                                 data: data[1],
-                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                backgroundColor: 'rgba(255, 99, 132, 0)',
                                 borderColor: 'rgba(255,99,132,1)',
+                                borderWidth: 1
+                            }, {
+                                label: 'b',
+                                data: data[2],
+                                backgroundColor: 'rgba(255, 199, 132, 0)',
+                                borderColor: '#36A2EB',
                                 borderWidth: 1
                             }]
                         },
@@ -57,10 +62,6 @@
                                         labelString: 'Date'
                                     }
                                 }]
-                            },
-                            title: {
-                                display: true,
-                                text: title
                             }
                         }
                     });
@@ -69,10 +70,9 @@
                 console.log(response);
             });
         }
-        if( $('.chart_loading').is('#pieChart') ) {
+        if ($('.chart_loading').is('#pieChart')) {
             var id = $('#pieChart').data('id');
             var range = $('#pieChart').data('range');
-            var title = $('#pieChart').data('title');
             gapi.client.sheets.spreadsheets.values.get({
                 spreadsheetId: id,
                 range: range,
@@ -105,11 +105,6 @@
                             }]
                         },
                         options: {
-                            title: {
-                                display: true,
-                                text: title
-                            },
-
                             tooltips: {
                                 callbacks: {
                                     label: function (tooltipItem, data) {
