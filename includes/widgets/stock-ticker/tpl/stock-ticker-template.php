@@ -11,8 +11,8 @@
         foreach ($recent_posts as $recent) {
             ?>
             <div class="post-title">
-                <i class="fa fa-send"></i>
                 <a href="<?php echo get_permalink($recent['ID']) ?>">
+                    <i class="fa fa-send"></i>
                     <?php echo $recent['post_title'] ?>
                 </a>
             </div>

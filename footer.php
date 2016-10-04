@@ -9,10 +9,11 @@
 <?php get_sidebar('footer'); ?>
 
 <!-- ========== Footer Nav and Copyright ========== -->
+
 <div class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-6" id="menu-footer">
                                 
                 <?php if ( has_nav_menu( 'footer' ) ) :  ?>
                 <!-- Navigation -->
@@ -31,7 +32,7 @@
                 <?php endif; ?>
                 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <!-- Copyright and Credits -->
                 <?php $stock_market_wp_footer_copyright_message = stock_market_wp_get_option('stock_market_wp_footer_copyright_message'); ?>
                 <?php $stock_market_wp_footer_credit_message = stock_market_wp_get_option('stock_market_wp_footer_credit_message'); ?>

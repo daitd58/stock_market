@@ -23,10 +23,10 @@ $stock_market_wp_blog_feed_display = stock_market_wp_get_option('stock_market_wp
 $stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp_blog_feed_buttons'); 
 ?>
 
-<?php 
-if($stock_market_wp_blog_feed_animations == 'Y' && $stock_market_wp_animations == 'Y')  $post_class = 'wow zoomIn';
-else $post_class = '';
-?>
+<?php //
+//if($stock_market_wp_blog_feed_animations == 'Y' && $stock_market_wp_animations == 'Y')  $post_class = 'wow zoomIn';
+//else $post_class = '';
+//?>
 
 <!-- Post -->
 <div id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix ' . $post_class); ?>>

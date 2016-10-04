@@ -1,16 +1,18 @@
 $font-family: "Open Sans";
 $text-size: 16px;
-$text-color: #eee;
+$text-color: #ddd;
 $heading-size: 20px;
 $heading-color: #fff;
 .footer-widgets {
+
 	*:hover {
 		transition: 0.7s;
 	}
+
 	font-family: $font-family;
 	font-size: $text-size !important;
 	color: $text-color;
-	background-color: #363636 !important;
+	background-color: #262626 !important;
 
 	.heading {
 		font-size: $heading-size;
@@ -30,7 +32,6 @@ $heading-color: #fff;
 		}
 	}
 
-
 	a {
 		text-decoration: none;
 		color: $text-color;
@@ -43,10 +44,10 @@ $heading-color: #fff;
 		.social {display: inline-block}
 		margin-top: 30px;
 		i.fa {
-			border: 10px solid #2b2b2b;
+			border: 10px solid #3b3b3b;
 			border-radius: 50%;
 			font-size: 20px;
-			background-color: #2b2b2b;
+			background-color: #3b3b3b;
 			color: #fff;
 			margin-right: 15px;
 			width: 40px;
@@ -75,6 +76,22 @@ $heading-color: #fff;
 		a {
 			margin-right: 15px;
 			margin-bottom: 15px;
+		}
+	}
+}
+
+div.footer{
+	color: #828282;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #191919;
+	#menu-footer {
+		a {
+			text-decoration: none;
+			color: #828282;
+			&:hover{
+				color: $primary-color;
+			}
 		}
 	}
 }
