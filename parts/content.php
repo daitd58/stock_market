@@ -80,9 +80,12 @@ $stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp
 
 
         <div class="entry-meta">
-            <?php _e('Posted: ', 'stock_market'); echo get_the_date("d/m/Y"); ?> |
-            <?php _e('Under: ', 'stock_market'); echo get_the_category_list(', '); ?> |
-            <?php _e('By: ', 'stock_market')?> <a class="author" href="<?php the_author_link() ?>"><?php the_author() ?></a>
+            <b><?php _e('Posted: ', 'stock_market'); ?></b>
+            <?php echo get_the_date("d/m/Y"); ?> |
+            <b><?php _e('Under: ', 'stock_market'); ?></b>
+            <?php echo get_the_category_list(', '); ?> |
+            <b><?php _e('By: ', 'stock_market') ?></b>
+            <a class="author" href="<?php the_author_link() ?>"><?php the_author() ?></a>
 
         </div>
         <!-- /Post Meta -->
@@ -98,7 +101,6 @@ $stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp
 
     </div>
 </div>
-
 
 
 <!-- /Post -->

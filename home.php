@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_template_part('parts/banner'); ?>
 <div id="blog-posts" class="container">
     <?php
     if ( have_posts() ) :
