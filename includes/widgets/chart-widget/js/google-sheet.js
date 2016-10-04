@@ -3,78 +3,131 @@
  */
 
 (function ($) {
-    function appendResults(text) {
-        var results = document.getElementById('results');
-        results.appendChild(document.createElement('P'));
-        results.appendChild(document.createTextNode(text));
-    }
-
     /**
      * Print the names and majors of students in a sample spreadsheet:
      * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
      */
     function listMajors() {
-        var id = $('#myChart').data('id');
-        var range = $('#myChart').data('range');
-        var title = $('#myChart').data('title');
-        gapi.client.sheets.spreadsheets.values.get({
-            spreadsheetId: id,
-            range: range,
-        }).then(function(response) {
-            var range = response.result;
-            var data = [];
-            $('#myChart').removeClass('chart_loading');
-            if (range.values.length > 0) {
-                for (i = 0; i < range.values.length; i++) {
-                    data[i] = range.values[i];
-                }
+        if ($('.chart_loading').is('#lineChart')) {
+            var id = $('#lineChart').data('id');
+            var range = $('#lineChart').data('range');
+            gapi.client.sheets.spreadsheets.values.get({
+                spreadsheetId: id,
+                range: range,
+            }).then(function (response) {
+                var range = response.result;
+                var data = [];
+                $('#lineChart').removeClass('chart_loading');
+                if (range.values.length > 0) {
+                    for (i = 0; i < range.values.length; i++) {
+                        data[i] = range.values[i];
+                    }
 
-                var ctx = document.getElementById("myChart");
-                var myChart = new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: data[0],
-                        datasets: [{
-                            label: '# of Votes',
-                            data: data[1],
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                            borderColor: 'rgba(255,99,132,1)',
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero:true
-                                },
-                                scaleLabel: {
-                                    display: true,
-                                    labelString: 'Price'
-                                }
-                            }],
-                            xAxes: [{
-                                ticks: {
-                                    beginAtZero:true
-                                },
-                                scaleLabel: {
-                                    display: true,
-                                    labelString: 'Date'
-                                }
+                    var ctx = document.getElementById("lineChart");
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: data[0],
+                            datasets: [{
+                                label: 'a',
+                                data: data[1],
+                                backgroundColor: 'rgba(255, 99, 132, 0)',
+                                borderColor: 'rgba(255,99,132,1)',
+                                borderWidth: 1
+                            }, {
+                                label: 'b',
+                                data: data[2],
+                                backgroundColor: 'rgba(255, 199, 132, 0)',
+                                borderColor: '#36A2EB',
+                                borderWidth: 1
                             }]
                         },
-                        title: {
-                            display: true,
-                            text: title
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    },
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Price'
+                                    }
+                                }],
+                                xAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    },
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'Date'
+                                    }
+                                }]
+                            }
                         }
+                    });
+                }
+            }, function (response) {
+                console.log(response);
+            });
+        }
+        if ($('.chart_loading').is('#pieChart')) {
+            var id = $('#pieChart').data('id');
+            var range = $('#pieChart').data('range');
+            gapi.client.sheets.spreadsheets.values.get({
+                spreadsheetId: id,
+                range: range,
+            }).then(function (response) {
+                var range = response.result;
+                var data = [];
+                $('#pieChart').removeClass('chart_loading');
+                if (range.values.length > 0) {
+                    for (i = 0; i < range.values.length; i++) {
+                        data[i] = range.values[i];
                     }
-                });
-            } else {
-                appendPre('No data found.');
-            }
-        }, function(response) {
-            appendPre('Error: ' + response.result.error.message);
-        });
+
+                    var ctx = document.getElementById("pieChart");
+                    var myChart = new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: data[0],
+                            datasets: [{
+                                data: data[1],
+                                backgroundColor: [
+                                    "#FF6384",
+                                    "#36A2EB",
+                                    "#FFCE56"
+                                ],
+                                hoverBackgroundColor: [
+                                    "#FF6384",
+                                    "#36A2EB",
+                                    "#FFCE56"
+                                ]
+                            }]
+                        },
+                        options: {
+                            tooltips: {
+                                callbacks: {
+                                    label: function (tooltipItem, data) {
+                                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                                        var tooltipLabel = data.labels[tooltipItem.index];
+                                        var tooltipData = allData[tooltipItem.index];
+                                        var total = 0;
+                                        for (var i in allData) {
+                                            total += parseInt(allData[i]);
+                                        }
+                                        var tooltipPercentage = Math.round((tooltipData / total) * 10000) / 100;
+                                        return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            }, function (response) {
+                console.log(response);
+            });
+        }
+
     }
 
     /**
