@@ -41,13 +41,25 @@
             @media (max-width: 991px) and (min-width: 768px){
                 margin-top: 40px;
             }
+            li{
+                margin: 0 15px;
+            }
             > li {
                 padding: 0 15px;
                 margin: 0;
-                border-right: 1px solid $primary-color;
-            }
-            li{
-                margin: 0 15px;
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 1px;
+                    height: 20px;
+                    right: 0;
+                    top: 10px;
+                }
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
             }
         }
     }
