@@ -53,6 +53,8 @@
                     width: 1px;
                     height: 20px;
                     right: 0;
+                    position: absolute;
+                    background-color: $primary-color;
                     top: 10px;
                 }
                 &:last-child {
