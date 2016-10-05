@@ -48,3 +48,17 @@
     }
 }
 
+.admin-bar .navbar-fixed-top {
+    top: 32px;
+}
+
+body #mega-menu-wrap-header #mega-menu-header {
+    padding: 20px 0;
+}
+
+@media(max-width: 767px) {
+    .admin-bar .navbar-fixed-top {
+        top: 46px;
+    }
+}
+
