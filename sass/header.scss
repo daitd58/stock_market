@@ -41,6 +41,11 @@
             @media (max-width: 991px) and (min-width: 768px){
                 margin-top: 40px;
             }
+            > li {
+                padding: 0 15px;
+                margin: 0;
+                border-right: 1px solid $primary-color;
+            }
             li{
                 margin: 0 15px;
             }
@@ -54,6 +59,12 @@
 
 body #mega-menu-wrap-header #mega-menu-header {
     padding: 20px 0;
+}
+
+body #mega-menu-wrap-header #mega-menu-header li.mega-menu-flyout.mega-menu-item-has-children > a.mega-menu-link:after,
+body #mega-menu-wrap-header #mega-menu-header li.mega-menu-flyout li.mega-menu-item-has-children > a.mega-menu-link:after,
+body #mega-menu-wrap-header #mega-menu-header > li.mega-menu-item-has-children > a.mega-menu-link:after {
+    content: '';
 }
 
 @media(max-width: 767px) {
