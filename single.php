@@ -19,21 +19,23 @@
                 <div class="post-details">
 
                     <!-- Post Thumbnail -->
-                    <div class="entry-thumbnail">
-                        <?php
-                        $stock_market_wp_post_featured_image = stock_market_wp_get_option('stock_market_wp_post_featured_image');
-                        if ($stock_market_wp_post_featured_image == 'Y') {
-                            ?>
 
-                            <?php if (has_post_thumbnail()) { ?>
-                                <!-- Post Image -->
+                    <?php
+                    $stock_market_wp_post_featured_image = stock_market_wp_get_option('stock_market_wp_post_featured_image');
+                    if ($stock_market_wp_post_featured_image == 'Y') {
+                        ?>
+
+                        <?php if (has_post_thumbnail()) { ?>
+                            <!-- Post Image -->
+                            <div class="entry-thumbnail">
                                 <div
                                     class="entry-image"><?php the_post_thumbnail('full', array('alt' => get_the_title())); ?></div>
-                                <!-- /Post Image -->
-                            <?php } ?>
-
+                            </div>
+                            <!-- /Post Image -->
                         <?php } ?>
-                    </div>
+
+                    <?php } ?>
+
 
                     <!-- /Post Thumnail -->
                     <div class="entry-post">

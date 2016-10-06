@@ -1,3 +1,6 @@
 .error404 {
-	color: $primary-color !important;
+	.error-content h2 {
+		color: $primary-color !important;
+	}
+
 }

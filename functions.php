@@ -100,12 +100,6 @@ function stock_market_wp_scripts() {
     
     #animate.css
     wp_enqueue_style('animate-css', STOCK_MARKET_URI . 'assets/css/animate.css');
-    
-    #fonts
-    wp_enqueue_style('stock_market-wp-googlefont1',
-    '//fonts.googleapis.com/css?family=Raleway:400,700,400italic,700italic,300,300italic,200italic,500,100,100italic,200,500italic,600,600italic,800,800italic,900,900italic');
-    wp_enqueue_style('stock_market-wp-googlefont2', 
-    '//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic');
 
     #default stylesheet
     $deps = array('bootstrap', 'font-awesome', 'bootstrap-social');
