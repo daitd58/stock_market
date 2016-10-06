@@ -1,0 +1,83 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.investment-detail{
+    ul.inv-list-item{
+        margin-left: -15px;
+        margin-right: -15px;
+        li.inv-item{
+            overflow: hidden;
+            margin-bottom: 30px;
+            .inner-item{
+                border: 1px solid #eeeeee;
+                text-align: center;
+                a{
+                    margin: 0;
+                    padding: 0;
+                    img{
+                        width: 100%;
+                    }
+                    .wrap-content{
+                        padding: 0 30px;
+                    }
+                    .title{
+                        margin: 15px 0 0px 0;
+                        padding: 15px 0px;
+                        min-height: 80px;
+                        border-bottom: 1px solid #eee;
+                    }
+                    &:before{
+                        content: '';
+                    }
+                    &:hover{
+                        text-decoration: none;
+                        color: $primary-color;
+                    }
+                }
+                a.wrap-link{
+
+                }
+                .item-bottom{
+                    overflow: hidden;
+                    position: relative;
+                    height: 60px;
+                    .short-description{
+                        font-size: 14px;
+                        padding: 15px 0px;
+                        margin: 0;
+                        -webkit-transition: all .3s ease-in-out;
+                        -moz-transition: all .3s ease-in-out;
+                        -o-transition: all .3s ease-in-out;
+                        -ms-transition: all .3s ease-in-out;
+                        transition: all .3s ease-in-out;
+                    }
+                    a.btn-view-detail{
+                        padding: 5px 15px;
+                        color: #fff;
+                        background: $primary-color;
+                        position: relative;
+                        bottom: -5px;
+                        -webkit-transition: all .3s ease-in-out;
+                        -moz-transition: all .3s ease-in-out;
+                        -o-transition: all .3s ease-in-out;
+                        -ms-transition: all .3s ease-in-out;
+                        transition: all .3s ease-in-out;
+                        &:hover{
+                            background: #009999;
+                        }
+                    }
+                }
+                &:hover{
+                    .short-description{
+                        transform: translateY(-50px);
+                    }
+                    .btn-view-detail{
+                        transform: translateY(-50px);
+                    }
+                }
+            }
+        }
+    }
+}

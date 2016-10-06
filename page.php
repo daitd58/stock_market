@@ -47,9 +47,9 @@
             
             <?php if($stock_market_wp_page_sidebar == 'Y') { ?>
             <!-- Sidebar -->
-            <div class="<?php echo $col2_class ?> sidebar">
-                <?php get_sidebar(); ?>
-            </div> 
+                <div class="<?php echo $col2_class ?> sidebar">
+                    <?php get_sidebar(); ?>
+                </div>
             <!-- /Sidebar -->
             <?php } ?>
             
