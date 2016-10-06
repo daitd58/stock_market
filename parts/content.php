@@ -11,120 +11,96 @@ $stock_market_wp_blog_feed_animations = stock_market_wp_get_option('stock_market
 $stock_market_wp_animations = stock_market_wp_get_option('stock_market_wp_animations');
 
 #show meta?
-$stock_market_wp_blog_feed_meta = stock_market_wp_get_option('stock_market_wp_blog_feed_meta'); 
-if($stock_market_wp_blog_feed_meta == 'Y') {
-    $stock_market_wp_blog_feed_meta_author = stock_market_wp_get_option('stock_market_wp_blog_feed_meta_author'); 
-    $stock_market_wp_blog_feed_meta_category = stock_market_wp_get_option('stock_market_wp_blog_feed_meta_category'); 
-    $stock_market_wp_blog_feed_meta_date = stock_market_wp_get_option('stock_market_wp_blog_feed_meta_date'); 
+$stock_market_wp_blog_feed_meta = stock_market_wp_get_option('stock_market_wp_blog_feed_meta');
+if ($stock_market_wp_blog_feed_meta == 'Y') {
+    $stock_market_wp_blog_feed_meta_author = stock_market_wp_get_option('stock_market_wp_blog_feed_meta_author');
+    $stock_market_wp_blog_feed_meta_category = stock_market_wp_get_option('stock_market_wp_blog_feed_meta_category');
+    $stock_market_wp_blog_feed_meta_date = stock_market_wp_get_option('stock_market_wp_blog_feed_meta_date');
 }
 #display type
-$stock_market_wp_blog_feed_display = stock_market_wp_get_option('stock_market_wp_blog_feed_display'); 
+$stock_market_wp_blog_feed_display = stock_market_wp_get_option('stock_market_wp_blog_feed_display');
 #show buttons?
-$stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp_blog_feed_buttons'); 
+$stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp_blog_feed_buttons');
 ?>
 
-<?php 
-if($stock_market_wp_blog_feed_animations == 'Y' && $stock_market_wp_animations == 'Y')  $post_class = 'wow zoomIn';
-else $post_class = '';
-?>
 
 <!-- Post -->
-<div id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix ' . $post_class); ?>>
-    
-    
-    <?php #if no title is defined for the post...
-    if(get_the_title() == '') { ?>
-    
-    <?php $id = get_the_ID(); ?>
-    <?php if($stock_market_wp_blog_feed_display != 'Small Image Left, Excerpt Right') { ?>
-    <!-- Post Title -->
-    <h3 class="entry-title block-title block-title-left"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php _e('Post ID: ', 'stock_market'); echo $id; ?></a></h3>
-    <?php } else { ?>
-    <h3 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php _e('Post ID: ', 'stock_market'); echo $id; ?></a></h3>
-    <?php } ?>
-    <!-- /Post Title -->
-    
-    <?php } else { ?>
-    
-    <?php if($stock_market_wp_blog_feed_display != 'Small Image Left, Excerpt Right') { ?>
-    <!-- Post Title -->
-    <h3 class="entry-title block-title block-title-left"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-    <?php } else { ?>
-    <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-    <!-- /Post Title -->
-    <?php } ?>
-    
-    <?php } ?>
-    
-    <?php if($stock_market_wp_blog_feed_display == 'Small Image Left, Excerpt Right') { ?>
-    
-    <!-- Small Image Left, Excerpt Right -->
-    <div class="entry-image entry-image-left">
-        <?php if(has_post_thumbnail()) { ?>
-        <a class="post-thumbnail post-thumbnail-small" href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title(), 'class'=>'img-responsive' ) ); ?></a>
+<div id="post-<?php the_ID(); ?>" <?php post_class('entry clearfix ' . $post_class); ?> class="post">
+
+    <div class="entry-thumbnail">
+        <div class="entry-image entry-image-left">
+            <?php if (has_post_thumbnail()) { ?>
+                <a class="post-thumbnail post-thumbnail-small"
+                   href="<?php the_permalink(); ?>"><?php the_post_thumbnail('post-thumbnail', array('alt' => get_the_title(), 'class' => 'img-responsive')); ?></a>
+            <?php } else { ?>
+            <a class="post-thumbnail post-thumbnail-small" href="<?php the_permalink(); ?>"><img
+                    src="<?php stock_market_wp_random_thumbnail(); ?>" class="img-responsive"/></a><?php } ?>
+        </div>
+
+    </div>
+    <div class="entry-content">
+
+        <?php #if no title is defined for the post...
+        if (get_the_title() == '') { ?>
+
+            <?php $id = get_the_ID(); ?>
+            <?php if ($stock_market_wp_blog_feed_display != 'Small Image Left, Excerpt Right') { ?>
+                <!-- Post Title -->
+                <h2 class="entry-title block-title block-title-left"><a href="<?php the_permalink(); ?>"
+                                                                        rel="bookmark"><?php _e('Post ID: ', 'stock_market');
+                        echo $id; ?></a></h2>
+            <?php } else { ?>
+                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"
+                                           rel="bookmark"><?php _e('Post ID: ', 'stock_market');
+                        echo $id; ?></a></h2>
+            <?php } ?>
+            <!-- /Post Title -->
+
         <?php } else { ?>
-        <a class="post-thumbnail post-thumbnail-small" href="<?php the_permalink(); ?>"><img src="<?php stock_market_wp_random_thumbnail(); ?>" class="img-responsive" /></a><?php } ?>        
-    </div>
 
-    <div class="entry-content-right">
-        <?php the_excerpt(); ?>
-        <?php wp_link_pages(); ?>
-    </div>
-    <!-- /Small Image Left, Excerpt Right -->
-    
-    <?php } else if($stock_market_wp_blog_feed_display == 'Large Image Top, Full Content Below') { ?>
-    
-    <!-- Large Image Top, Full Content Below -->
-    <?php if(has_post_thumbnail()) { ?>
-    <div class="entry-image entry-image-top">
-        <a class="post-thumbnail post-thumbnail-large" href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'full', array( 'alt' => get_the_title() ) ); ?></a>
-    </div>
-    <?php } else if($stock_market_wp_enable_demo == 'Y') { ?>
-        <a class="post-thumbnail post-thumbnail-large" href="<?php the_permalink(); ?>"><img src="<?php stock_market_wp_random_thumbnail('full'); ?>" class="img-responsive" /></a><?php } ?>  
-    <div class="entry-content">        
-        <?php the_content(__('View full post...', 'stock_market')); ?>
-        <?php wp_link_pages(); ?>
-    </div>
-    <!-- /Large Image Top, Full Content Below -->
-    
-    <?php } else if($stock_market_wp_blog_feed_display == 'No Image, Excerpt') { ?>
-    
-    <!-- No Image, Excerpt -->
-    <div class="entry-content">        
-        <?php the_excerpt('...'); ?>
-        <?php wp_link_pages(); ?>
-    </div>
-    <!-- No Image, Excerpt -->
-    
-    <?php } ?>
-    
-    <?php if($stock_market_wp_blog_feed_meta == 'Y') { ?>
-    
-    <!-- Post Meta -->
-    <div class="entry-meta <?php if($stock_market_wp_blog_feed_display == 'Small Image Left, Excerpt Right') { ?> entry-meta-right <?php } ?>">
-        <?php if($stock_market_wp_blog_feed_meta_date == 'Y') { $temp[] = __('Posted: ', 'stock_market') . get_the_date(); } ?>
-        <?php if($stock_market_wp_blog_feed_meta_category == 'Y') { $temp[] = __('Under: ', 'stock_market'). get_the_category_list(', '); } ?>
-        <?php if($stock_market_wp_blog_feed_meta_author == 'Y') { $temp[] = __('By: ', 'stock_market')  . get_the_author();  } ?>
-        <?php if($temp) $str = implode('<span class="sep">/</span>', $temp) ?>
-        <?php echo $str; ?>
-    </div>
-    <!-- /Post Meta -->
-    
-    <?php } ?>
-    
-    <?php if($stock_market_wp_blog_feed_buttons == 'Y') { ?>
-    
-    <!-- Post Buttons -->
-    <div class="entry-buttons <?php if($stock_market_wp_blog_feed_display == 'Small Image Left, Excerpt Right') { ?> entry-buttons-right <?php } ?>">
-        <a href="<?php the_permalink(); ?>" class="btn btn-primary-custom"><?php _e('Read More', 'stock_market'); ?></a>
-        <?php if ( ! post_password_required() && comments_open() || '0' != get_comments_number() )  { ?> 
-        <?php comments_popup_link( __( 'Leave comment', 'stock_market' ), __( '1 Comment', 'stock_market' ), esc_html__( '% Comments', 'stock_market' ), 'btn btn-inverse' ); ?></a>
+            <?php if ($stock_market_wp_blog_feed_display != 'Small Image Left, Excerpt Right') { ?>
+                <!-- Post Title -->
+                <h2 class="entry-title block-title block-title-left"><a
+                        href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <?php } else { ?>
+                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <!-- /Post Title -->
+            <?php } ?>
+
         <?php } ?>
-    </div>
-    <!-- /Post Buttons -->
-    
-    <?php } ?>
 
+
+        <!-- Small Image Left, Excerpt Right -->
+
+        <div class="entry-content-right">
+            <?php the_excerpt(); ?>
+            <?php wp_link_pages(); ?>
+        </div>
+        <!-- /Small Image Left, Excerpt Right -->
+
+
+        <div class="entry-meta">
+            <b><?php _e('Posted: ', 'stock_market'); ?></b>
+            <?php echo get_the_date("d/m/Y"); ?> |
+            <b><?php _e('Under: ', 'stock_market'); ?></b>
+            <?php echo get_the_category_list(', '); ?> |
+            <b><?php _e('By: ', 'stock_market') ?></b>
+            <a class="author" href="<?php the_author_link() ?>"><?php the_author() ?></a>
+
+        </div>
+        <!-- /Post Meta -->
+
+
+        <!-- Post Buttons -->
+        <div class="entry-buttons entry-buttons-right">
+            <a href="<?php the_permalink(); ?>"
+               class="btn btn-primary-custom"><?php _e('READ MORE', 'stock_market'); ?></a>
+        </div>
+        <!-- /Post Buttons -->
+
+
+    </div>
 </div>
+
 
 <!-- /Post -->

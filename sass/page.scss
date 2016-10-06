@@ -1,0 +1,32 @@
+.page {
+	font-size: $text-size;
+	.page-title {
+		font-size: $title-size;
+		color: $primary-color;
+	}
+	.page-content {
+		margin-top: 50px;
+		.page-thumbnail {
+			margin-right: 40px;
+			float: left;
+			.page-image img {
+				width: 350px;
+				height: auto;
+			}
+		}
+	}
+	.comments-area {
+		border-top: 1px solid rgba(147, 147, 147, 0.66);
+		.form-submit input.submit{
+			background-color: $primary-color;
+			color: #fff !important;
+			&:hover {
+				background-color: #019e9e;
+			}
+		}
+		h3 {
+			color: $primary-color !important;
+		}
+	}
+
+}
