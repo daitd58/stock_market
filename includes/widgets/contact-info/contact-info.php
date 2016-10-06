@@ -25,7 +25,7 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Contact Informations.', 'stock-market'),
+                'description' => __('Footer: Thông tin liên hệ với công ty.', 'stock-market'),
                 'panels_groups' => array('stock-market')
             ),
 
@@ -36,17 +36,17 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
             array(
                 'heading' => array(
                     'type' => 'text',
-                    'label' => __('Heading:', 'stock-market'),
-                    'default' => __('Contact Info', 'stock-market'),
+                    'label' => __('Tiêu đề:', 'stock-market'),
+                    'default' => __('Thông tin liên hệ', 'stock-market'),
                 ),
                 'contact_infor' => array(
                     'type' => 'section',
-                    'label' => __('Normal informations to contact.', 'stock-market'),
+                    'label' => __('Thông tin liên hệ thông thường.', 'stock-market'),
                     'hide' => true,
                     'fields' => array(
                         'phone' => array(
                             'type' => 'text',
-                            'label' => __('Phone number', 'stock-market')
+                            'label' => __('Số điện thoại', 'stock-market')
                         ),
                         'email' => array(
                             'type' => 'text',
@@ -54,27 +54,27 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
                         ),
                         'working-time' => array(
                             'type' => 'text',
-                            'label' => __('Working time in a week', 'stock-market')
+                            'label' => __('Thời gian làm việc', 'stock-market')
                         ),
                     )
                 ),
 
                 'social_info' => array(
                     'type' => 'section',
-                    'label' => __('Social link', 'stock-market'),
+                    'label' => __('Mạng xã hội', 'stock-market'),
                     'hide' => true,
                     'fields' => array(
                         'facebook' => array(
                             'type' => 'text',
-                            'label' => __('Facebook address', 'stock-market')
+                            'label' => __('Địa chỉ Facebook', 'stock-market')
                         ),
                         'twitter' => array(
                             'type' => 'text',
-                            'label' => __('Twitter address', 'stock-market')
+                            'label' => __('Địa chỉ Twitter', 'stock-market')
                         ),
                         'google-plus' => array(
                             'type' => 'text',
-                            'label' => __('Google-plus address', 'stock-market')
+                            'label' => __('Địa chỉ Google Plus', 'stock-market')
                         ),
                     )
                 )

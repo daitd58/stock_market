@@ -25,7 +25,7 @@ class Stock_Market_Footer_Info extends SiteOrigin_Widget
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Footer Informations.', 'stock-market'),
+                'description' => __('Footer: Mô tả ngắn', 'stock-market'),
                 'panels_groups' => array('stock-market')
             ),
 
@@ -36,8 +36,8 @@ class Stock_Market_Footer_Info extends SiteOrigin_Widget
             array(
                 'content' => array(
                     'type' => 'text',
-                    'label' => __('Content:', 'stock-market'),
-                    'default' => __('This is content which displayed in footer', 'stock-market'),
+                    'label' => __('Nội dung:', 'stock-market'),
+                    'default' => __('Đây là đoạn mô tả hiển ngắn hiển thị ở footer.', 'stock-market'),
                 )
             ),
 

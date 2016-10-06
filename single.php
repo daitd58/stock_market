@@ -61,13 +61,13 @@
                             <!-- Post Meta -->
                             <div class="entry-meta">
                                 <?php if ($stock_market_wp_post_meta_date == 'Y') {
-                                    $temp[] = __('Date: ', 'stock_market') . get_the_date("d/m/Y");
+                                    $temp[] = __('Ngày: ', 'stock_market') . get_the_date("d/m/Y");
                                 } ?>
                                 <?php if ($stock_market_wp_post_meta_category == 'Y') {
-                                    $temp[] = __('Categories: ', 'stock_market') . get_the_category_list(', ');
+                                    $temp[] = __('Thể loại: ', 'stock_market') . get_the_category_list(', ');
                                 } ?>
                                 <?php if ($stock_market_wp_post_meta_author == 'Y') {
-                                    $temp[] = __('Posted by: ', 'stock_market') . get_the_author();
+                                    $temp[] = __('Đăng bởi: ', 'stock_market') . get_the_author();
                                 } ?>
                                 <?php if ($temp) $str = implode('<span class="sep"> | </span>', $temp) ?>
                                 <?php echo $str; ?>

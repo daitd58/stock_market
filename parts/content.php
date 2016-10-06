@@ -80,11 +80,11 @@ $stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp
 
 
         <div class="entry-meta">
-            <b><?php _e('Posted: ', 'stock_market'); ?></b>
+            <b><?php _e('Ngày đăng: ', 'stock_market'); ?></b>
             <?php echo get_the_date("d/m/Y"); ?> |
-            <b><?php _e('Under: ', 'stock_market'); ?></b>
+            <b><?php _e('Thể loại: ', 'stock_market'); ?></b>
             <?php echo get_the_category_list(', '); ?> |
-            <b><?php _e('By: ', 'stock_market') ?></b>
+            <b><?php _e('Đăng bởi: ', 'stock_market') ?></b>
             <a class="author" href="<?php the_author_link() ?>"><?php the_author() ?></a>
 
         </div>
@@ -94,7 +94,7 @@ $stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp
         <!-- Post Buttons -->
         <div class="entry-buttons entry-buttons-right">
             <a href="<?php the_permalink(); ?>"
-               class="btn btn-primary-custom"><?php _e('READ MORE', 'stock_market'); ?></a>
+               class="btn btn-primary-custom"><?php _e('XEM THÊM', 'stock_market'); ?></a>
         </div>
         <!-- /Post Buttons -->
 

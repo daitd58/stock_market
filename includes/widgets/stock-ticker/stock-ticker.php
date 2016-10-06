@@ -25,7 +25,7 @@ class Stock_Market_Stock_Ticker extends SiteOrigin_Widget
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Listing stock tickers', 'stock-market'),
+                'description' => __('Footer: Các bài đăng gần nhất', 'stock-market'),
                 'panels_groups' => array('stock-market')
             ),
 
@@ -36,12 +36,12 @@ class Stock_Market_Stock_Ticker extends SiteOrigin_Widget
             array(
                 'heading' => array(
                     'type' => 'text',
-                    'label' => __('Heading:', 'stock-market'),
-                    'default' => __('Stock Ticker', 'stock-market'),
+                    'label' => __('Tiêu đề:', 'stock-market'),
+                    'default' => __('Bài đăng mới nhất', 'stock-market'),
                 ),
                 'quantity' => array(
                     'type' => 'number',
-                    'label' => __('Quantity of stock tickers', 'stock-market'),
+                    'label' => __('Số lượng bài đăng', 'stock-market'),
                 )
             ),
             //The $base_folder path string.
