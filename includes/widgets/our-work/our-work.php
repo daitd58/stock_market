@@ -25,7 +25,7 @@ class Stock_Market_Our_Work extends SiteOrigin_Widget
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Company most recent works', 'stock-market'),
+                'description' => __('Footer: Những dự án hiện tại của công ty', 'stock-market'),
                 'panels_groups' => array('stock-market')
             ),
 
@@ -36,8 +36,8 @@ class Stock_Market_Our_Work extends SiteOrigin_Widget
             array(
                 'heading' => array(
                     'type' => 'text',
-                    'label' => __('Heading:', 'stock-market'),
-                    'default' => __('Our Work', 'stock-market'),
+                    'label' => __('Tiêu đề:', 'stock-market'),
+                    'default' => __('Công việc của chúng tôi', 'stock-market'),
                 )
             ),
 
