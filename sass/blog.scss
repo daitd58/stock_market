@@ -1,4 +1,5 @@
-.blog {
+#blog-posts {
+
 	*:hover {
 		transition: 0.7s;
 	}
@@ -64,20 +65,29 @@
 	}
 
 	.paginate-link {
-		padding-top: 10px;
-		padding-bottom: 10px;
-		font-size: 20px;
+		float: right;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		font-size: 14px;
 		text-align: center;
+		color: #fff;
+		& > * {
+			padding: 10px;
+			margin-left: 5px;
+			border-radius: 5px;
+		}
+		font-weight: bold;
 		.page-numbers.current {
-			color: #0000fe;
+			background-color: $primary-color;
 		}
 		a {
-			color: $primary-color;
+			background-color: #ebebeb;
 			text-decoration: none;
-			&:hover {
-				color: #0000fe;
+			color: #979797;
+			&:hover, &:focus {
+				background-color: $primary-color;
+				color: white;
 			}
-			margin-left: 10px;
 		}
 	}
 }
