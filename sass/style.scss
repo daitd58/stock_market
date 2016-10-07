@@ -16,3 +16,14 @@ $text-size: 14px;
     margin-bottom: 50px;
 }
 
+.banner-style{
+    @media (min-width: 992px) {
+        margin-top: 100px !important;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-top: 140px !important;
+    }
+    @media (max-width: 767px) {
+        margin-top: 70px !important;
+    }
+}
