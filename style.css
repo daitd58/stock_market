@@ -59,7 +59,7 @@ body{ font-size:14px; /*padding-top:90px*/; line-height:2; color:#3a3939; }
 /* Headings
 ------------------------------------------------------------------------*/
 
-h1,h2,h3,h4,h5,h6{ font-family: 'Raleway', sans-serif; line-height:1.36; font-weight:600;}
+h1,h2,h3,h4,h5,h6{ font-family: 'Arial', sans-serif; line-height:1.36; font-weight:600;}
 h1{ font-size:28px; }
 h2{ font-size:26px; }
 h3{ font-size:18px; }
@@ -70,7 +70,7 @@ h6{ font-size:16px; }
 /* Special Headings
 ------------------------------------------------------------------------*/
 
-.block-title{ font-family:'Raleway', sans-serif; font-weight:600; margin:0 0 25px; text-transform:uppercase; position:relative; text-align:center; line-height:1.2; padding-bottom:10px; color:#3a3939; }
+.block-title{ font-family:'Arial', sans-serif; font-weight:600; margin:0 0 25px; text-transform:uppercase; position:relative; text-align:center; line-height:1.2; padding-bottom:10px; color:#3a3939; }
 .block-title:after{ content:""; height:0px; width:50px; position:absolute; bottom:-2px; left:50%; margin-left:-25px; border-bottom:1px solid #f96238; }
 .block-title a{ color:inherit; }
 .block-title.block-title-left {text-align:left;}
@@ -189,7 +189,7 @@ textarea.input-lg{ height:auto; }
 .navbar-custom .navbar-brand{ line-height:36px; padding-top:0px; padding-bottom:0px; height:100%; }
 a.navbar-brand.text-logo { text-transform: uppercase; font-weight: bold; font-size:26px; }
 
-.navbar-custom .navbar-nav > li > a{ font-family:'Raleway', sans-serif; font-size:13px; font-weight:bold; font-weight:600; padding: 25px 15px; -webkit-transition:all 0.3s ease-in-out; -moz-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out; text-transform: uppercase; color:#010101; letter-spacing:0.5px}
+.navbar-custom .navbar-nav > li > a{ font-family:'Arial', sans-serif; font-size:13px; font-weight:bold; font-weight:600; padding: 25px 15px; -webkit-transition:all 0.3s ease-in-out; -moz-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out; text-transform: uppercase; color:#010101; letter-spacing:0.5px}
 .navbar-custom .navbar-nav > li > a { line-height: 40px;}
 .navbar-custom .navbar-nav{ position:relative }
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover { color:#f96238 !important; background-color: transparent; }
@@ -294,7 +294,7 @@ a.navbar-brand.text-logo { text-transform: uppercase; font-weight: bold; font-si
 .blog-feed .entry .entry-content-right p:last-child{ margin-bottom:0; }
 .blog-feed .entry .entry-content-right:after{ height:0; position:absolute; bottom:0; left:0; width:50px; content:""; border-bottom:1px solid #f96238; }
 
-.blog-feed .entry .entry-meta{ text-transform:uppercase; font-family:'Raleway', sans-serif; font-weight:600; font-size:12px; margin-bottom:15px; }
+.blog-feed .entry .entry-meta{ text-transform:uppercase; font-family:'Arial', sans-serif; font-weight:600; font-size:12px; margin-bottom:15px; }
 .blog-feed .entry .entry-meta-right{ margin-left: 315px; }
 .blog-feed .entry .entry-meta a{ font-weight:600; color:inherit; }
 .blog-feed .entry .entry-meta .sep{ margin:0 5px; }
@@ -322,7 +322,7 @@ a.navbar-brand.text-logo { text-transform: uppercase; font-weight: bold; font-si
 .post-content .post .entry-title{ position:relative; padding-bottom:20px; line-height:20px; margin:0 0 15px; text-transform:uppercase; }
 .post-content .post .entry-title:after{ height:0; position:absolute; bottom:0; left:0; width:50px; content:""; border-bottom:1px solid #f96238; }
 
-.post-content .post .entry-meta{ text-transform:uppercase; font-family:'Raleway', sans-serif; font-weight:600; font-size:12px; margin-bottom:15px; margin-top:20px; }
+.post-content .post .entry-meta{ text-transform:uppercase; font-family:'Arial', sans-serif; font-weight:600; font-size:12px; margin-bottom:15px; margin-top:20px; }
 .post-content .post .entry-meta a{ font-weight:600; }
 .post-content .post .entry-meta .sep{ margin:0 5px; }
 .post-content .post .entry-meta label{ font-weight:600; margin-bottom:0; margin-right:10px; }
@@ -340,7 +340,7 @@ a.navbar-brand.text-logo { text-transform: uppercase; font-weight: bold; font-si
 .post-content .type-attachment .entry-title{ position:relative; padding-bottom:20px; line-height:20px; margin:0 0 15px; text-transform:uppercase; }
 .post-content .type-attachment .entry-title:after{ height:0; position:absolute; bottom:0; left:0; width:50px; content:""; border-bottom:1px solid #f96238; }
 
-.post-content .type-attachment .entry-meta{ text-transform:uppercase; font-family:'Raleway', sans-serif; font-weight:600; font-size:12px; margin-bottom:15px; margin-top:20px; }
+.post-content .type-attachment .entry-meta{ text-transform:uppercase; font-family:'Arial', sans-serif; font-weight:600; font-size:12px; margin-bottom:15px; margin-top:20px; }
 .post-content .type-attachment .entry-meta a{ font-weight:600; }
 .post-content .type-attachment .entry-meta .sep{ margin:0 5px; }
 .post-content .type-attachment .entry-meta label{ font-weight:600; margin-bottom:0; margin-right:10px; }
@@ -423,8 +423,8 @@ a.navbar-brand.text-logo { text-transform: uppercase; font-weight: bold; font-si
 .frontpage-cta:before { width: 100%; height: 100%; background-color: #333; opacity: 0.35; content: ""; position: absolute; left: 0; top: 0; z-index: -1; }
 .frontpage-cta .description {width:75%; margin:0 auto;}
 .frontpage-cta .btn{margin-right:10px;margin-top:10px;text-decoration:none;}
-.frontpage-cta p{ text-align:center; font-family: 'Raleway', sans-serif; line-height: 1.36; font-size:22px; font-weight:500; text-transform:uppercase; /*letter-spacing:-1px*/}
-.frontpage-cta p.small{ font-size:14px; font-family:'Raleway', sans-serif; text-transform:uppercase;margin-bottom:0px;line-height:20px;}
+.frontpage-cta p{ text-align:center; font-family: 'Arial', sans-serif; line-height: 1.36; font-size:22px; font-weight:500; text-transform:uppercase; /*letter-spacing:-1px*/}
+.frontpage-cta p.small{ font-size:14px; font-family:'Arial', sans-serif; text-transform:uppercase;margin-bottom:0px;line-height:20px;}
 .frontpage-cta a{color:#fff; text-decoration:underline;}
 .frontpage-cta a:hover{color:#fff;}
 .frontpage-cta.parallax-bg{color: #fff !important;}
@@ -463,7 +463,7 @@ a.navbar-brand.text-logo { text-transform: uppercase; font-weight: bold; font-si
 .recent-entry .recent-entry-content p:last-child{ margin-bottom:0; }
 .recent-entry .recent-entry-content:after{ height:0; position:absolute; bottom:0; left:0; width:50px; content:""; border-bottom:1px solid #f96238; }
 
-.recent-entry .recent-entry-meta{ text-transform:uppercase; font-family:'Raleway', sans-serif; font-weight:600; font-size:12px; margin-bottom:15px; }
+.recent-entry .recent-entry-meta{ text-transform:uppercase; font-family:'Arial', sans-serif; font-weight:600; font-size:12px; margin-bottom:15px; }
 .recent-entry .recent-entry-meta a{ font-weight:600; }
 .recent-entry .recent-entry-meta .sep{ margin:0 5px; }
 .recent-entry .recent-entry-meta label{ font-weight:600; margin-bottom:0; margin-right:10px;}
@@ -487,7 +487,7 @@ a.navbar-brand.text-logo { text-transform: uppercase; font-weight: bold; font-si
 
 .comments-area{border-top:1px solid #3a3939; padding-top:30px;}
 
-h3#comments{ color: #f96238;font-family: "Raleway",sans-serif;font-weight: 400;margin: 0 0 20px; }
+h3#comments{ color: #f96238;font-family: "Arial",sans-serif;font-weight: 400;margin: 0 0 20px; }
 
 .commentlist{list-style:none;margin:0 0 40px;padding:0 0 15px;border-bottom:1px solid #3a3939}
 .commentlist ul{list-style:none;margin:0;padding:1px 0}
@@ -507,11 +507,11 @@ h3#comments{ color: #f96238;font-family: "Raleway",sans-serif;font-weight: 400;m
 .commentlist ul.children ul.children .comment-body:after{top:15px}
 .commentlist .comment-author{line-height:1.3}
 .commentlist .comment-author .fn a,
-.commentlist .comment-author .fn{font-family:'Raleway', sans-serif;font-size:13px;text-transform:uppercase;font-style:normal}
+.commentlist .comment-author .fn{font-family:'Arial', sans-serif;font-size:13px;text-transform:uppercase;font-style:normal}
 .commentlist .comment-author .says{display:none}
 .commentlist .comment-meta{margin:0 0 10px;color:#999;font-size:12px}
 .commentlist .comment-meta a{color:inherit}
-#respond h3{color: #f96238;font-family: "Raleway",sans-serif;font-weight: 400;margin: 20px 0 20px;font-size: 20px; text-transform:uppercase;}
+#respond h3{color: #f96238;font-family: "Arial",sans-serif;font-weight: 400;margin: 20px 0 20px;font-size: 20px; text-transform:uppercase;}
 #commentform input[type="text"],#commentform textarea{border:1px solid #aaa;height:40px;color:#555;font-size:14px;padding:6px 12px;line-height:1.42857;width:100%;max-width:500px;-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;-moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset}
 #commentform textarea{height:auto;max-width:inherit}
 #commentform label{display:block;text-transform:uppercase;font-weight:600;line-height:1.3;margin:0;padding:0 0 10px;position:absolute;left:0;top:0}
@@ -538,7 +538,7 @@ p.nocomments { font-size: 16px; text-transform: uppercase; color: #666; }
 ------------------------------------------------------------------------*/
 
 .nav-foot{ list-style:none; margin:0;  padding:0 }
-.nav-foot li{ display:inline-block; font-family:'Raleway', sans-serif; margin-right:20px; font-size:12px; }
+.nav-foot li{ display:inline-block; font-family:'Arial', sans-serif; margin-right:20px; font-size:12px; }
 .nav-foot li a{ display:block; font-weight:600; text-transform:uppercase; color:#010101; }
 
 /* Back to Top

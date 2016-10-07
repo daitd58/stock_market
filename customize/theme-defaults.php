@@ -103,7 +103,7 @@ $stock_market_wp_defaults['stock_market_wp_post_featured_image'] = 'Y';
 
 #stock_market_wp_page_section
 $stock_market_wp_defaults['stock_market_wp_page_banner'] = 'Custom Header';
-$stock_market_wp_defaults['stock_market_wp_page_sidebar'] = 'Y';
+$stock_market_wp_defaults['stock_market_wp_page_sidebar'] = 'N';
 
 #stock_market_advanced_section
 $stock_market_wp_defaults['stock_market_wp_google_analytics'] = '';

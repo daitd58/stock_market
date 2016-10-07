@@ -21,9 +21,9 @@ function stock_market_add_widget_tabs($tabs)
     $tabs[] = array(
         'title' => __('Stock Market Widgets', 'stock_market'),
         'filter' => array(
-            'groups' => array('stock_market')
-        )
-    );
+            'groups' => array( 'stock-market')
+            )
+        );
     return $tabs;
 }
 
