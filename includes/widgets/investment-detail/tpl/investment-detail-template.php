@@ -12,7 +12,9 @@
 				<li class="inv-item col-md-3 col-sm-4 col-xs-6">
 					<div class="inner-item">
 						<a href="<?php echo $src_file; ?>" class="wrap-link">
-							<img src="<?php echo $src_image[0]; ?>" alt="">
+							<div class="wrap-img">
+								<img src="<?php echo $src_image[0]; ?>" alt="">
+							</div>
 							<div class="wrap-content">
 								<h3 class="title"><?php echo $repeater_item['title']; ?></h3>
 							</div>
