@@ -11,7 +11,7 @@
 				?>
 				<li class="inv-item col-md-3 col-sm-4 col-xs-6">
 					<div class="inner-item">
-						<a href="<?php echo $src_file; ?>" class="wrap-link">
+						<a href="<?php echo $src_file; ?>" class="wrap-link" target="_blank">
 							<div class="wrap-img">
 								<img src="<?php echo $src_image[0]; ?>" alt="">
 							</div>
@@ -21,7 +21,7 @@
 						</a>
 						<div class="item-bottom">
 							<p class="short-description"><?php echo $repeater_item['description']; ?></p>
-							<a href="<?php echo $src_file; ?>" class="btn-view-detail">Xem chi tiết</a>
+							<a href="<?php echo $src_file; ?>" class="btn-view-detail" target="_blank">Xem chi tiết</a>
 						</div>
 					</div>
 				</li>
