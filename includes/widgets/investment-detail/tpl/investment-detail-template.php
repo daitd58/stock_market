@@ -6,14 +6,14 @@
 		if ( ! empty( $instance['investment'] ) ) {
 			$repeater_items = $instance['investment'];
 			foreach ( $repeater_items as $index => $repeater_item ) {
-				$src_image = wp_get_attachment_image_src( $repeater_item['featured_image'], array( '270', '250' ) );
+				$src_image = wp_get_attachment_image_src( $repeater_item['featured_image'], array( '300' ) );
 				$src_file  = wp_get_attachment_url( $repeater_item['file'] );
 				?>
 				<li class="inv-item col-md-3 col-sm-4 col-xs-6">
 					<div class="inner-item">
 						<a href="<?php echo $src_file; ?>" class="wrap-link" target="_blank">
 							<div class="wrap-img">
-								<img src="<?php echo $src_image[0]; ?>" alt="">
+								<img src="<?php if($src_image[0]){echo $src_image[0];}else{echo get_template_directory_uri() . '/assets/img/default-thumbnail.png'; } ?>" alt="">
 							</div>
 							<div class="wrap-content">
 								<h3 class="title"><?php echo $repeater_item['title']; ?></h3>
