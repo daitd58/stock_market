@@ -4,10 +4,10 @@
 		font-size: $text-size;
 
 		.entry-thumbnail {
-			margin-right: 40px;
-			float: left;
+			margin-left: 40px;
+			float: right;
 			.entry-image img {
-				width: 400px;
+				max-width: 400px;
 				height: auto;
 			}
 		}

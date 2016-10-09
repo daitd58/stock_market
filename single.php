@@ -98,9 +98,9 @@
                 </div>
                 <div class="clearfix"></div>
 
-                <?php if (comments_open()) : ?>
-                    <?php comments_template(); ?>
-                <?php endif; ?>
+<!--                --><?php //if (comments_open()) : ?>
+<!--                    --><?php //comments_template(); ?>
+<!--                --><?php //endif; ?>
 
             </div>
         </div>

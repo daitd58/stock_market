@@ -1,8 +1,8 @@
 
 .footer-widgets {
-	$text-size: 16px;
+	$text-size: 14px;
 	$text-color: #ddd;
-	$heading-size: 20px;
+	$heading-size: 18px;
 	$heading-color: #fff;
 
 	*:hover {
@@ -13,19 +13,21 @@
 	font-size: $text-size !important;
 	color: $text-color;
 	background-color: #262626 !important;
+	padding-top: 10px !important;
+	padding-bottom: 0 !important;
 
 	.heading {
 		font-size: $heading-size;
 		color: $heading-color;
-		margin-bottom: 35px;
+		margin-bottom: 10px;
 	}
 	.stock-market-footer-info {
-		.text-logo {margin-bottom: 30px;}
+		.text-logo {margin-bottom: 10px;}
 	}
 
 	.contact-info {
 		div {
-			margin-bottom: 15px;
+			margin-bottom: 5px;
 		}
 		.fa {
 			margin-right: 10px;
@@ -42,7 +44,7 @@
 
 	.social-info {
 		.social {display: inline-block}
-		margin-top: 30px;
+		margin-top: 20px;
 		i.fa {
 			border: 10px solid #3b3b3b;
 			border-radius: 50%;
@@ -62,11 +64,13 @@
 
 	.stock-market-stock-ticker {
 		i {margin-right: 10px;}
-		.post-title {line-height: 36px;}
+		.post-title {line-height: 30px;}
 	}
 
 	.stock-market-our-work {
-		margin-bottom: 55px;
+		.heading {
+			padding-bottom: 15px;
+		}
 		img {
 			width: 70px;
 			&:hover {
@@ -81,17 +85,15 @@
 }
 
 div.footer{
-	color: #828282;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	background-color: #191919;
-	#menu-footer {
-		a {
-			text-decoration: none;
-			color: #828282;
-			&:hover{
-				color: $primary-color;
-			}
-		}
+	.copyright{
+		float: none;
+		text-align: center;
 	}
+	a:hover {
+		color: $primary-color;
+	}
+	color: #828282;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #191919;
 }
