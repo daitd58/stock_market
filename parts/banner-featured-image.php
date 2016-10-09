@@ -9,7 +9,7 @@
 $src = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'banner-featured-image' );
 if($src) { $url = $src[0]; ?>
 <!-- ========== Banner - Featured Image ========== -->
-<div class="jumbotron image-banner banner-featured-image" style="background:url('<?php echo esc_url($url) ?>') no-repeat 0 0 #ffffff;background-size:cover;background-position:center center">
+<div class="jumbotron image-banner banner-featured-image banner-style" style="background:url('<?php echo esc_url($url) ?>') no-repeat 0 0 #ffffff;background-size:cover;background-position:center center">
     <div class="container">
         <h1 class="block-title wow zoomIn" ><?php echo esc_html(stock_market_wp_title()); ?><h1>
     </div>

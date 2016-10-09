@@ -3,6 +3,7 @@ $font-family: "Arial";
 $title-size: 30px;
 $hover-color: #019e9e;
 $text-size: 14px;
+
 @import "header";
 @import "widgets";
 @import "footer";
@@ -11,3 +12,18 @@ $text-size: 14px;
 @import "page";
 @import "back-to-top";
 
+.page-title{
+    margin-bottom: 50px;
+}
+
+.banner-style{
+    @media (min-width: 992px) {
+        margin-top: 100px !important;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-top: 140px !important;
+    }
+    @media (max-width: 767px) {
+        margin-top: 70px !important;
+    }
+}
