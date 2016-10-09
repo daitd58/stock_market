@@ -89,8 +89,10 @@ div.footer{
 	.copyright{
 		float: none;
 		text-align: center;
+		text-transform: none;
+		font-size: 14px;
 	}
-	a:hover {
+	a:hover, a:focus {
 		color: $primary-color;
 	}
 	color: #828282;
