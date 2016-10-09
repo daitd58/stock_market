@@ -5,19 +5,20 @@
     </h3>
     <div class="content">
         <?php
-        $args = array('numberposts' => '6');
-        $recent_posts = wp_get_recent_posts($args);
+        $number = 0;
+        $recent_posts = wp_get_recent_posts();
         foreach ($recent_posts as $recent) {
-            ?>
+            if ($number == 6) break;
+            if (has_post_thumbnail($recent['ID'])):
+                $number ++;
+                ?>
                 <a href="<?php echo get_permalink($recent['ID']) ?>">
                     <?php
-                    if (has_post_thumbnail($recent['ID'])):
-                        echo get_the_post_thumbnail($recent['ID'], 'thumbnail');
-                    else : echo "";
-                    endif;
+                    echo get_the_post_thumbnail($recent['ID'], 'thumbnail');
+
                     ?>
                 </a>
-            <?php
+            <?php endif;
         }
         wp_reset_query();
         ?>
