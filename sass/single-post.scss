@@ -1,6 +1,6 @@
 .post-content {
 	.post-details {
-		margin-bottom: 50px;
+
 		font-size: $text-size;
 		text-align: justify;
 
@@ -30,6 +30,25 @@
 		color: $primary-color;
 		&:hover, &:focus {
 			color: #019e9e;
+		}
+	}
+
+	.entry-related {
+		ul, li {
+			list-style: none;
+		}
+		ul {
+			padding-left: 0;
+		}
+		a {
+			i {
+				padding-right: 10px;
+			}
+			color: black;
+			&:hover {
+				text-decoration: underline;
+				color: $primary-color;
+			}
 		}
 	}
 
