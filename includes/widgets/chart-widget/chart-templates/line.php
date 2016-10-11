@@ -6,10 +6,17 @@
  * Time: 5:40 PM
  */
 
-$chart_title = $instance['title'] ? $instance['title'] : '';
-$sheet_title = $instance['range'];
-$id = $instance['id'];
-
-$html = '<p>'. $chart_title .'</p>';
-$html .= '<canvas id="lineChart" class="chart_loading" data-id="' . $id . '" data-range="' . $sheet_title . '" width="818" height="409"></canvas>';
+$html = '<div class="nav-tabs">';
+$html .= '<a href="#first" class="active">' . $instance['first_chart']['title'] . '</a>';
+$html .= '<a href="#second">' . $instance['second_chart']['title'] . '</a>';
+$html .= '</div>';
+$html .= '<div class="content-tabs">';
+$html .= '<div id="first" class="active">';
+$html .= '<div id="value"></div>';
+$html .= '<div id="first_chart" height="400"></div>';
+$html .= '</div>';
+$html .= '<div id="second">';
+$html .= '<div id="value2"></div>';
+$html .= '<div id="second_chart" height="400"></div>';
+$html .= '</div></div>';
 echo $html;
