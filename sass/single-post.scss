@@ -1,7 +1,8 @@
 .post-content {
 	.post-details {
-		margin-bottom: 50px;
+
 		font-size: $text-size;
+		text-align: justify;
 
 		.entry-thumbnail {
 			margin-left: 40px;
@@ -14,8 +15,15 @@
 	}
 
 	.entry-title {
+		line-height: 1.2;
 		color: $primary-color;
 		font-size: 30px;
+	}
+	.entry-tags a {
+		&:hover, &:focus {
+			background-color: $primary-color !important;
+			transition: 0.7s;
+		}
 	}
 	a {
 		text-decoration: none;
@@ -25,17 +33,22 @@
 		}
 	}
 
-	.comments-area {
-		border-top: 1px solid rgba(147, 147, 147, 0.66);
-		.form-submit input.submit{
-			background-color: $primary-color;
-			color: #fff !important;
-			&:hover {
-				background-color: #019e9e;
-			}
+	.entry-related {
+		ul, li {
+			list-style: none;
 		}
-		h3 {
-			color: $primary-color !important;
+		ul {
+			padding-left: 0;
+		}
+		a {
+			i {
+				padding-right: 10px;
+			}
+			color: black;
+			&:hover {
+				text-decoration: underline;
+				color: $primary-color;
+			}
 		}
 	}
 

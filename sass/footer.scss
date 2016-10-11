@@ -73,13 +73,14 @@
 		}
 		img {
 			width: 70px;
+			padding-bottom: 20px;
 			&:hover {
 				transform: scale(1.1);
 			}
 		}
 		a {
-			margin-right: 15px;
-			margin-bottom: 15px;
+			padding-right: 15px;
+			padding-bottom: 15px;
 		}
 	}
 }
@@ -88,8 +89,10 @@ div.footer{
 	.copyright{
 		float: none;
 		text-align: center;
+		text-transform: none;
+		font-size: 14px;
 	}
-	a:hover {
+	a:hover, a:focus {
 		color: $primary-color;
 	}
 	color: #828282;

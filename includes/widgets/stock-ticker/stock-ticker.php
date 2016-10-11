@@ -20,7 +20,7 @@ class Stock_Market_Stock_Ticker extends SiteOrigin_Widget
             'stock-market-stock-ticker',
 
             // The name of the widget for display purposes.
-            __('Stock Market: Stock Ticker', 'stock-market'),
+            __('Stock Market: Mã cổ phiếu', 'stock-market'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
@@ -37,12 +37,8 @@ class Stock_Market_Stock_Ticker extends SiteOrigin_Widget
                 'heading' => array(
                     'type' => 'text',
                     'label' => __('Tiêu đề:', 'stock-market'),
-                    'default' => __('Bài đăng mới nhất', 'stock-market'),
+                    'default' => __('Mã cổ phiếu', 'stock-market'),
                 ),
-                'quantity' => array(
-                    'type' => 'number',
-                    'label' => __('Số lượng bài đăng', 'stock-market'),
-                )
             ),
             //The $base_folder path string.
             plugin_dir_path(__FILE__)

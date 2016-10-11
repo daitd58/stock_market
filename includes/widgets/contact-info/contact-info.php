@@ -22,24 +22,24 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
             // The name of the widget for display purposes.
             __('Stock Market: Contact Info', 'stock-market'),
 
-            // The $widget_options array, which is passed through to WP_Widget.
+            // The 'widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
                 'description' => __('Footer: Thông tin liên hệ với công ty.', 'stock-market'),
                 'panels_groups' => array('stock-market')
             ),
 
-            //The $control_options array, which is passed through to WP_Widget
+            //The 'control_options array, which is passed through to WP_Widget
             array(),
 
-            //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
+            //The 'form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             array(
                 'heading' => array(
                     'type' => 'text',
                     'label' => __('Tiêu đề:', 'stock-market'),
                     'default' => __('Thông tin liên hệ', 'stock-market'),
                 ),
-                'contact_infor' => array(
+                'contact_info' => array(
                     'type' => 'section',
                     'label' => __('Thông tin liên hệ thông thường.', 'stock-market'),
                     'hide' => true,
@@ -80,7 +80,7 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
                 )
             ),
 
-            //The $base_folder path string.
+            //The 'base_folder path string.
             plugin_dir_path(__FILE__)
         );
     }
@@ -93,6 +93,19 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
     function get_style_name($instance)
     {
         return false;
+    }
+
+    function get_template_variables($instance, $args)
+    {
+        return array(
+            'heading' => !empty ($instance ['heading']) ? $instance ['heading'] : "Thông tin liên",
+            'contact_phone' => !empty ($instance ['contact_info']['phone']) ? $instance ['contact_info']['phone'] : "+09xxx",
+            'contact_email' => !empty ($instance ['contact_info']['email']) ? $instance ['contact_info']['email'] : "abc@gmail.com",
+            'contact_time' => !empty ($instance ['contact_info']['working-time']) ? $instance ['contact_info']['working-time'] : "Everyday",
+            'facebook' => !empty ($instance ['social_info']['facebook']) ? $instance ['social_info']['facebook'] : "https://www.facebook.com/",
+            'twitter' => !empty ($instance ['social_info']['twitter']) ? $instance ['social_info']['twitter'] : "https://twitter.com/",
+            'gg_plus' => !empty ($instance ['social_info']['gg_plus']) ? $instance ['social_info']['gg_plus'] : "https://plus.google.com",
+        );
     }
 }
 

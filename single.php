@@ -98,15 +98,31 @@
                 </div>
                 <div class="clearfix"></div>
 
-<!--                --><?php //if (comments_open()) : ?>
-<!--                    --><?php //comments_template(); ?>
-<!--                --><?php //endif; ?>
-
             </div>
+            <!--  Post Related  -->
+            <div class="entry-related">
+                <h2 class="title">Bài viết liên quan</h2>
+                <?php
+                $related = get_posts( array( 'category__in' => wp_get_post_categories(get_the_ID()), 'numberposts' => 5, 'post__not_in' => array(get_the_ID()) ) );
+                if( $related ) foreach( $related as $post ) {
+                    setup_postdata($post); ?>
+                    <ul>
+                        <li>
+                            <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>">
+                                <i class="fa fa-hand-o-right"></i>
+                                <?php the_title(); ?>
+                            </a>
+                        </li>
+                    </ul>
+                <?php }
+                wp_reset_postdata(); ?>
+            </div>
+            <!--  /Post Related  -->
+
         </div>
+        <!-- ========== /Page Content ========== -->
 
     </div>
-    <!-- ========== /Page Content ========== -->
 
 <?php endwhile; ?>
 

@@ -1,19 +1,17 @@
-#blog-posts {
+#parts-content {
 
 	*:hover {
 		transition: 0.7s;
 	}
 	.post {
-		padding-bottom: 50px;
-		padding-top: 50px;
-		border-bottom: 1px solid rgba(147, 147, 147, 0.66);
-		clear: both;
+		margin: 80px auto;
 		&:first-child {
 			margin-top: 50px;
 		}
 		h2 {
+			text-align: center;
 			font-size: 30px;
-			margin-top: 0;
+			margin: 0 auto;
 		}
 		a {
 			text-decoration: none;
@@ -24,6 +22,7 @@
 		}
 
 		.entry-buttons {
+			margin-top: 50px;
 			a {
 				background-color: $primary-color;
 				color: #fff;
@@ -35,7 +34,7 @@
 		}
 
 		.entry-thumbnail {
-			margin-right: 30px;
+			margin-right: 50px;
 			float: left;
 			a {
 				text-align: center;
@@ -51,19 +50,19 @@
 		.entry-content-right {
 			p {
 				font-size: $text-size;
+				text-align: justify;
 			}
-		}
-		.entry-buttons {
-			margin-top: 10px;
 		}
 
-		.entry-meta {
-			.author {
-				text-transform: uppercase;
-			}
-		}
 	}
 
+	.entry-meta {
+		text-align: center;
+		.author {
+			text-transform: uppercase;
+		}
+		margin-bottom: 30px;
+	}
 	.paginate-link {
 		float: right;
 		padding-top: 50px;

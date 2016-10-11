@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php get_template_part('parts/banner'); ?>
-<div id="parts-content" class="container blog-posts">
+<div id="parts-content" class="container archive">
     <?php
     if ( have_posts() ) :
         while ( have_posts() ) : the_post();

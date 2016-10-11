@@ -1,6 +1,10 @@
-.error404 {
-	.error-content h2 {
-		color: $primary-color !important;
-	}
 
+.error-content {
+	h2, h3 {
+		color: $primary-color;
+	}
+	.container div {
+		display: none;
+	}
 }
+
