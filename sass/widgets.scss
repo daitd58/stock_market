@@ -32,11 +32,13 @@ rect.highcharts-label-box {
     }
   }
   .content-tabs {
+    width: 100%;
     > div {
       display: none;
     }
     .active {
       display: block;
+      width: 100%;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       -ms-transition: all 0.3s;
