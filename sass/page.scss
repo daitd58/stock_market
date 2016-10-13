@@ -3,30 +3,30 @@
 	.page-title {
 		font-size: $title-size;
 		color: $primary-color;
+		line-height: 1.2 !important;
 	}
 	.page-content {
 		margin-top: 50px;
 		.page-thumbnail {
 			margin-right: 40px;
-			float: left;
+			float: right;
 			.page-image img {
 				width: 350px;
 				height: auto;
 			}
 		}
 	}
-	.comments-area {
-		border-top: 1px solid rgba(147, 147, 147, 0.66);
-		.form-submit input.submit{
-			background-color: $primary-color;
-			color: #fff !important;
-			&:hover {
-				background-color: #019e9e;
-			}
-		}
-		h3 {
-			color: $primary-color !important;
-		}
+	ul, li {
+		list-style: none;
+	}
+	ul {
+		padding-left: 0;
+	}
+	li::before {
+		content: '\f00c';
+		font-family: FontAwesome;
+		color: $primary-color;
+		padding-right: 5px;
 	}
 
 }
