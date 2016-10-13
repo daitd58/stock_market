@@ -1,4 +1,5 @@
 .post-content {
+
 	.post-details {
 
 		font-size: $text-size;
@@ -15,7 +16,7 @@
 	}
 
 	.entry-title {
-		line-height: 1.2;
+		line-height: 1.2 !important;
 		color: $primary-color;
 		font-size: 30px;
 	}
@@ -34,12 +35,7 @@
 	}
 
 	.entry-related {
-		ul, li {
-			list-style: none;
-		}
-		ul {
-			padding-left: 0;
-		}
+
 		a {
 			i {
 				padding-right: 10px;
@@ -52,5 +48,16 @@
 		}
 	}
 
-
+	ul, li {
+		list-style: none;
+	}
+	ul {
+		padding-left: 0;
+	}
+	li::before {
+		content: '\f00c';
+		font-family: FontAwesome;
+		color: $primary-color;
+		padding-right: 5px;
+	}
 }
