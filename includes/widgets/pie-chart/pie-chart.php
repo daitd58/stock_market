@@ -1,6 +1,6 @@
 <?php
 /*
-Widget Name: Chart Widget
+Widget Name: Pie Chart Widget
 Description: A powerful yet simple button widget for your sidebars or Page Builder pages.
 Author: SiteOrigin
 Author URI: https://siteorigin.com
@@ -9,7 +9,7 @@ Author URI: https://siteorigin.com
 if (!class_exists('SiteOrigin_Widget'))
     return;
 
-class Chart_Widget extends SiteOrigin_Widget
+class Pie_Chart_Widget extends SiteOrigin_Widget
 {
     function __construct()
     {
@@ -18,15 +18,15 @@ class Chart_Widget extends SiteOrigin_Widget
         //Call the parent constructor with the required arguments.
         parent::__construct(
         // The unique id for your widget.
-            'chart-widget',
+            'pie-chart',
 
             // The name of the widget for display purposes.
-            __('Chart Widget', 'stock_market'),
+            __('Pie Chart Widget', 'stock_market'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Show the chart template', 'stock_market'),
+                'description' => __('Pie chart widget', 'stock_market'),
                 'help' => '',
                 'panels_groups' => array('stock-market')
             ),
@@ -36,30 +36,23 @@ class Chart_Widget extends SiteOrigin_Widget
 
             //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             array(
-                'first_chart' => array(
-                    'type' => 'section',
-                    'label' => __('First Chart', 'stock_market'),
+                'part' => array(
+                    'type' => 'repeater',
+                    'label' => __('Part', 'stock_market'),
                     'hide' => true,
                     'fields' => array(
                         'title' => array(
                             'type' => 'text',
-                            'label' => __('Chart title', 'stock_market'),
+                            'label' => __('Title', 'stock_market'),
                             'default' => '',
+                        ),
+                        'percent' => array(
+                            'type' => 'number',
+                            'label' => __('Percent', 'stock_market'),
+                            'default' => ''
                         )
                     )
                 ),
-                'second_chart' => array(
-                    'type' => 'section',
-                    'label' => __('Second Chart', 'stock_market'),
-                    'hide' => true,
-                    'fields' => array(
-                        'title' => array(
-                            'type' => 'text',
-                            'label' => __('Chart title', 'stock_market'),
-                            'default' => '',
-                        )
-                    )
-                )
             ),
 
             //The $base_folder path string.
@@ -69,19 +62,19 @@ class Chart_Widget extends SiteOrigin_Widget
 
     function enqueue_frontend_scripts($instance)
     {
-        wp_enqueue_script('highstock-js', STOCK_MARKET_URI . 'includes/widgets/chart-widget/js/highstock.js', array('jquery'), '', true);
-        wp_enqueue_script('moment-js', STOCK_MARKET_URI . 'includes/widgets/chart-widget/js/moment.min.js', array('jquery'), '', true);
-        wp_enqueue_script('chart', STOCK_MARKET_URI . 'includes/widgets/chart-widget/js/chart.js', array('jquery'), '', true);
+        wp_enqueue_script('chart-js', STOCK_MARKET_URI . 'includes/widgets/pie-chart/js/Chart.js', array('jquery'), '', true);
+        wp_enqueue_script('pie-chart', STOCK_MARKET_URI . 'includes/widgets/pie-chart/js/pie.js', array('jquery'), '', true);
+        wp_localize_script('pie-chart', 'pie_data', $instance['part']);
     }
 
     function get_template_name($instance)
     {
-        return 'line';
+        return 'pie';
     }
 
     function get_template_dir($instance)
     {
-        return 'chart-templates';
+        return 'chart-template';
     }
 
     function get_style_name($instance)
@@ -90,4 +83,4 @@ class Chart_Widget extends SiteOrigin_Widget
     }
 }
 
-siteorigin_widget_register('chart-widget', __FILE__, 'Chart_Widget');
+siteorigin_widget_register('pie-chart', __FILE__, 'Pie_Chart_Widget');

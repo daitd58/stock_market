@@ -1,11 +1,69 @@
 @import "invesment-detail-widget";
 
-.chart_loading {
-  position: relative;
-  background-image: url('../../assets/img/loading.gif');
-  -moz-background-image: url('../../assets/img/loading.gif');
-  -o-background-image: url('../../assets/img/loading.gif');
-  -webkit-background-image: url('../../assets/img/loading.gif');
-  background-repeat: no-repeat;
-  background-position: center;
+rect.highcharts-label-box {
+  width: 90px;
+  height: 19px;
+}
+
+.so-widget-chart-widget {
+  #value, #value2 {
+    display: inline-block;
+    float: right;
+    padding: 0 5px;
+    background-color: $primary-color;
+    color: #fff;
+    margin: 15px 13px;
+  }
+  .nav-tabs {
+    a {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #fff;
+      color: $primary-color;
+      margin-left: 5px;
+      -webkit-border-radius: 2px 2px 0 0;
+      -moz-border-radius: 2px 2px 0 0;
+      border-radius: 2px 2px 0 0;
+      &:hover, &.active {
+        text-decoration: none;
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+  .content-tabs {
+    width: 100%;
+    > div {
+      display: none;
+    }
+    .active {
+      display: block;
+      width: 100%;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+  }
+
+  #first_chart, #second_chart {
+    clear: both;
+  }
+}
+
+@media(max-width: 767px) {
+  #pieChart {
+    width: 300px !important;
+    margin: 0 auto;
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  #pieChart {
+    width: auto !important;
+    margin: 0 auto;
+    height: auto !important;
+  }
 }
