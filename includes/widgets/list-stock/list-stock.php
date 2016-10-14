@@ -70,9 +70,24 @@ class List_Stock_Widget extends SiteOrigin_Widget {
 							'description' => __('Chín nghìn VND nhập: 9,000')
 						),
 						'lai-lo' => array(
-							'type'  => 'number',
+							'type' => 'section',
 							'label' => __( 'Lãi/lỗ (%):', 'stock-market' ),
-							'description' => __('9 phần trăm nhập: 9')
+							'fields'=> array(
+								'type' => array(
+									'type' => 'radio',
+									'label' => __( 'Chọn lãi hoặc lỗ', 'stock-market' ),
+									'default' => 'lai',
+									'options' => array(
+										'lai' => __( 'Lãi', 'stock-market' ),
+										'lo' => __( 'Lỗ', 'stock-market' )
+									)
+								),
+								'value' => array(
+									'type'  => 'number',
+									'label' => __( 'Giá trị Lãi/lỗ (%):', 'stock-market' ),
+									'description' => __('9 phần trăm nhập: 9')
+								)
+							)
 						),
 						'ti-trong' => array(
 							'type'  => 'text',
