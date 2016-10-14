@@ -18,14 +18,14 @@
                 {
                     data: data,
                     backgroundColor: [
-                        "#00b356",
-                        "#1a94ff",
-                        "#ffd466"
+                        "rgb(0,145,255)",
+                        "rgb(50,250,250)",
+                        "rgb(111,222,123)"
                     ],
                     hoverBackgroundColor: [
-                        "#00b356",
-                        "#1a94ff",
-                        "#ffd466"
+                        "rgb(0,145,255)",
+                        "rgb(50,250,250)",
+                        "rgb(111,222,123)"
                     ]
                 }
             ]
