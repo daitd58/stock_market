@@ -18,14 +18,14 @@
                 {
                     data: data,
                     backgroundColor: [
-                        "#00a651",
-                        "#0088FF",
-                        "#FFCE56"
+                        "#00b356",
+                        "#1a94ff",
+                        "#ffd466"
                     ],
                     hoverBackgroundColor: [
-                        "#00a651",
-                        "#0088FF",
-                        "#FFCE56"
+                        "#00b356",
+                        "#1a94ff",
+                        "#ffd466"
                     ]
                 }
             ]
