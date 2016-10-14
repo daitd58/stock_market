@@ -1,7 +1,7 @@
-
 <div class="stock-market-footer-info">
     <div class="stock-market-logo">
-        <?php get_template_part('parts/header', 'logo'); ?>
+        <?php if( get_theme_mod('stock_market_wp_footer_logo') && get_theme_mod('stock_market_wp_footer_logo') != '' ) ?>
+            <a class="navbar-brand image-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_theme_mod('stock_market_wp_footer_logo') ) ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
     </div>
     <div class="clearfix"></div>
     <div class="social-info">
@@ -21,8 +21,5 @@
                 <i class="fa fa-google-plus"></i>
             </a>
         </div>
-
-
     </div>
-    
 </div>
