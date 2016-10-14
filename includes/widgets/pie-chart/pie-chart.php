@@ -36,6 +36,11 @@ class Pie_Chart_Widget extends SiteOrigin_Widget
 
             //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             array(
+                'title' => array(
+                    'type' => 'text',
+                    'label' => __('Title', 'stock_market'),
+                    'default' => ''
+                ),
                 'part' => array(
                     'type' => 'repeater',
                     'label' => __('Part', 'stock_market'),

@@ -6,7 +6,6 @@
  */
 ?>
 <?php get_header(); ?>
-<?php get_template_part('parts/banner'); ?>
 
 <!-- ========== Content Starts ========== -->
     <div class="section blog-feed bg-white">

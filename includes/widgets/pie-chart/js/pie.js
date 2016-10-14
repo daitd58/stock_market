@@ -47,7 +47,10 @@
                 }
             },
             responsive: true,
-            maintainAspectRatio: true
+            maintainAspectRatio: true,
+            legend: {
+                position: 'bottom'
+            }
         }
     });
 })(jQuery)
