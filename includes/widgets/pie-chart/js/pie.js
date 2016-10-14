@@ -5,9 +5,11 @@
 (function ($) {
     var label = [];
     var data = [];
+    var colors = [];
     for (var i = 0; i < pie_data.length; i++) {
         label[i] = pie_data[i].title;
         data[i] = pie_data[i].percent;
+        colors[i] = pie_data[i].color;
     }
     var ctx = document.getElementById('pieChart');
     var myPieChart = new Chart(ctx, {
@@ -17,16 +19,8 @@
             datasets: [
                 {
                     data: data,
-                    backgroundColor: [
-                        "rgb(0,145,255)",
-                        "rgb(50,250,250)",
-                        "rgb(111,222,123)"
-                    ],
-                    hoverBackgroundColor: [
-                        "rgb(0,145,255)",
-                        "rgb(50,250,250)",
-                        "rgb(111,222,123)"
-                    ]
+                    backgroundColor: colors,
+                    hoverBackgroundColor: colors
                 }
             ]
         },
