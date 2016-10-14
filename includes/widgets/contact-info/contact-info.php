@@ -52,10 +52,6 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
                             'type' => 'text',
                             'label' => __('Email', 'stock-market')
                         ),
-                        'working-time' => array(
-                            'type' => 'text',
-                            'label' => __('Thời gian làm việc', 'stock-market')
-                        ),
                     )
                 ),
 
@@ -68,9 +64,9 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
                             'type' => 'text',
                             'label' => __('Địa chỉ Facebook', 'stock-market')
                         ),
-                        'twitter' => array(
+                        'youtube' => array(
                             'type' => 'text',
-                            'label' => __('Địa chỉ Twitter', 'stock-market')
+                            'label' => __('Địa chỉ Youtube', 'stock-market')
                         ),
                         'google-plus' => array(
                             'type' => 'text',
@@ -99,11 +95,10 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
     {
         return array(
             'heading' => !empty ($instance ['heading']) ? $instance ['heading'] : "Thông tin liên",
-            'contact_phone' => !empty ($instance ['contact_info']['phone']) ? $instance ['contact_info']['phone'] : "+09xxx",
-            'contact_email' => !empty ($instance ['contact_info']['email']) ? $instance ['contact_info']['email'] : "abc@gmail.com",
-            'contact_time' => !empty ($instance ['contact_info']['working-time']) ? $instance ['contact_info']['working-time'] : "Everyday",
+            'contact_phone' => !empty ($instance ['contact_info']['phone']) ? $instance ['contact_info']['phone'] : "0944.323.118 [Mr. Khương] - 0906217163 [Mr. Đức]",
+            'contact_email' => !empty ($instance ['contact_info']['email']) ? $instance ['contact_info']['email'] : "contact@phoenixstock.com",
             'facebook' => !empty ($instance ['social_info']['facebook']) ? $instance ['social_info']['facebook'] : "https://www.facebook.com/",
-            'twitter' => !empty ($instance ['social_info']['twitter']) ? $instance ['social_info']['twitter'] : "https://twitter.com/",
+            'youtube' => !empty ($instance ['social_info']['youtube']) ? $instance ['social_info']['youtube'] : "https://youtube.com/",
             'gg_plus' => !empty ($instance ['social_info']['gg_plus']) ? $instance ['social_info']['gg_plus'] : "https://plus.google.com",
         );
     }

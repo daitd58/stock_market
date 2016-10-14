@@ -10,10 +10,6 @@
             <i class="fa fa-envelope"></i>
             <?php echo $contact_email ?>
         </div>
-        <div class="working-time">
-            <i class="fa fa-clock-o"></i>
-            <?php echo $contact_time ?>
-        </div>
     </div>
     <div class="social-info">
         <div class="social facebook">
@@ -22,9 +18,9 @@
             </a>
         </div>
 
-        <div class="social twitter">
-            <a class="link-twitter" href="<?php echo $twitter ?>">
-                <i class="fa fa-twitter"></i>
+        <div class="social youtube">
+            <a class="link-youtube" href="<?php echo $youtube ?>">
+                <i class="fa fa-youtube"></i>
             </a>
         </div>
 
