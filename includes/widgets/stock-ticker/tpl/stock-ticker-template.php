@@ -5,21 +5,21 @@
     </h3>
     <div class="content">
         <?php
-        $categories = get_categories(array(
-            'orderby' => 'date',
-            'order' => 'ASC',
-            'parent' => 0,
-        ));
+        $categories = get_categories();
         foreach ($categories as $category) {
-            $category_link = sprintf('<a href="%1$s" alt="%2$s"><i class="fa fa-send"></i>%3$s</a>',
-                esc_url(get_category_link($category->term_id)),
-                esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $category->name)),
-                esc_html($category->name)
-            );
-            ?>
-            <div class="post-title">
-                <?php echo $category_link ?>
+            $news_query = new WP_Query( array(
+                'cat'                 => $category->term_id,
+                'posts_per_page'      => 1,
+                'no_found_rows'       => true,
+                'ignore_sticky_posts' => true,
+                'orderby' => 'date',
+                'order' => 'DESC'
+            ));
+            while ( $news_query->have_posts() ) : $news_query->the_post()?>
+            <div class="latest-post post-title">
+                <a href="<?php the_permalink() ?>"><i class="fa fa-paper-plane"></i><?php echo $category->name ?></a>
             </div>
+            <?php endwhile ?>
             <?php
         }
         wp_reset_query();

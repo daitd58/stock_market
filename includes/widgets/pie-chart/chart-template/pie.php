@@ -10,5 +10,5 @@ if ($instance['title'] && $instance['title'] != '')
 else
     $html = '';
 
-$html .= '<canvas id="pieChart" width="400" height="600"></canvas>';
+$html .= '<canvas id="pieChart" width="290" height="435px"></canvas>';
 echo $html;

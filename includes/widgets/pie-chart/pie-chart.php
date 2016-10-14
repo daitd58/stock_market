@@ -55,6 +55,10 @@ class Pie_Chart_Widget extends SiteOrigin_Widget
                             'type' => 'number',
                             'label' => __('Percent', 'stock_market'),
                             'default' => ''
+                        ),
+                        'color' => array(
+                            'type' => 'color',
+                            'label' => __('Color', 'stock_market')
                         )
                     )
                 ),
