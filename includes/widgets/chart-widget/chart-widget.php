@@ -72,6 +72,8 @@ class Chart_Widget extends SiteOrigin_Widget
         wp_enqueue_script('highstock-js', STOCK_MARKET_URI . 'includes/widgets/chart-widget/js/highstock.js', array('jquery'), '', true);
         wp_enqueue_script('moment-js', STOCK_MARKET_URI . 'includes/widgets/chart-widget/js/moment.min.js', array('jquery'), '', true);
         wp_enqueue_script('chart', STOCK_MARKET_URI . 'includes/widgets/chart-widget/js/chart.js', array('jquery'), '', true);
+        $baseUrl = home_url('/');
+        wp_localize_script('chart', 'baseUrl', $baseUrl);
     }
 
     function get_template_name($instance)
