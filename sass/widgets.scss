@@ -34,8 +34,18 @@ rect.highcharts-label-box {
   .content-tabs {
     width: 100%;
     > div {
-      display: none;
+      width: 100%;
     }
+
+    .tab-pane:not(.active) {
+      height: 0;
+      overflow-y: hidden;
+    }
+
+    #first_chart, #second_chart {
+      width: 100%;
+    }
+
     .active {
       display: block;
       width: 100%;
@@ -50,4 +60,10 @@ rect.highcharts-label-box {
   #first_chart, #second_chart {
     clear: both;
   }
+}
+
+.so-widget-pie-chart {
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
 }

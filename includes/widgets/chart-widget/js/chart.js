@@ -143,11 +143,9 @@
                     decimalPoint: ','
                 }
             });
-            var width = $('.content-tabs').width();
             $('#second_chart').highcharts({
                 chart: {
                     type: 'spline',
-                    width: width,
                 },
                 rangeSelector: {
                     enabled: true,
