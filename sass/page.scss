@@ -8,6 +8,15 @@
 	.page-content {
 		text-align: justify;
 		.page-thumbnail {
+			@media screen and (max-width: 767px) {
+				margin-left: 0;
+				margin-bottom: 20px;
+				float: none;
+				.page-image img {
+					width: 100% !important;
+				}
+			}
+
 			margin-left: 40px;
 			float: right;
 			.page-image img {

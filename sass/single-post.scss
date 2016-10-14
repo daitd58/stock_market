@@ -6,11 +6,19 @@
 		text-align: justify;
 
 		.entry-thumbnail {
+			@media screen and (max-width: 767px) {
+				.entry-image img {
+					width: 100% !important;
+				}
+				float: none;
+				margin: 0;
+			}
 			margin-left: 40px;
 			float: right;
 			.entry-image img {
 				max-width: 400px;
 				height: auto;
+
 			}
 		}
 	}
