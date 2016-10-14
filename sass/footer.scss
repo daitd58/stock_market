@@ -25,7 +25,7 @@
 		margin-bottom: 10px;
 	}
 	.stock-market-footer-info {
-		.text-logo {margin-bottom: 10px;}
+		.image-logo {padding-left: 0;}
 	}
 
 	.contact-info {
@@ -47,6 +47,7 @@
 
 	.social-info {
 		.social {display: inline-block}
+		padding-top: 10px;
 		i.fa {
 			margin-right: 10px;
 			border: 10px solid #3b3b3b;
