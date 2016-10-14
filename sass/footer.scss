@@ -47,8 +47,8 @@
 
 	.social-info {
 		.social {display: inline-block}
-		margin-top: 20px;
 		i.fa {
+			margin-right: 10px;
 			border: 10px solid #3b3b3b;
 			border-radius: 50%;
 			font-size: 20px;
@@ -76,8 +76,7 @@
 
 div.footer{
 	.copyright{
-		float: none;
-		text-align: center;
+		text-align: left;
 		text-transform: none;
 		font-size: 14px;
 	}

@@ -18,7 +18,6 @@
         <div class="copyright">
             <i class="fa fa-copyright"></i>
             <?php echo wp_kses_post($stock_market_wp_footer_copyright_message); ?>
-            <br/>
             <span class="credit">
                 <?php echo wp_kses_post($stock_market_wp_footer_credit_message); ?>
             </span>

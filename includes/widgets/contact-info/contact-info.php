@@ -55,25 +55,7 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
                     )
                 ),
 
-                'social_info' => array(
-                    'type' => 'section',
-                    'label' => __('Mạng xã hội', 'stock-market'),
-                    'hide' => true,
-                    'fields' => array(
-                        'facebook' => array(
-                            'type' => 'text',
-                            'label' => __('Địa chỉ Facebook', 'stock-market')
-                        ),
-                        'youtube' => array(
-                            'type' => 'text',
-                            'label' => __('Địa chỉ Youtube', 'stock-market')
-                        ),
-                        'google-plus' => array(
-                            'type' => 'text',
-                            'label' => __('Địa chỉ Google Plus', 'stock-market')
-                        ),
-                    )
-                )
+                
             ),
 
             //The 'base_folder path string.

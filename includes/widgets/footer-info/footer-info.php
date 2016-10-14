@@ -38,6 +38,25 @@ class Stock_Market_Footer_Info extends SiteOrigin_Widget
                     'type' => 'text',
                     'label' => __('Nội dung:', 'stock-market'),
                     'default' => __('Đây là đoạn mô tả hiển ngắn hiển thị ở footer.', 'stock-market'),
+                ),
+                'social_info' => array(
+                    'type' => 'section',
+                    'label' => __('Mạng xã hội', 'stock-market'),
+                    'hide' => true,
+                    'fields' => array(
+                        'facebook' => array(
+                            'type' => 'text',
+                            'label' => __('Địa chỉ Facebook', 'stock-market')
+                        ),
+                        'youtube' => array(
+                            'type' => 'text',
+                            'label' => __('Địa chỉ Youtube', 'stock-market')
+                        ),
+                        'google-plus' => array(
+                            'type' => 'text',
+                            'label' => __('Địa chỉ Google Plus', 'stock-market')
+                        ),
+                    )
                 )
             ),
 
@@ -54,6 +73,14 @@ class Stock_Market_Footer_Info extends SiteOrigin_Widget
     function get_style_name($instance)
     {
         return false;
+    }
+    function get_template_variables($instance, $args)
+    {
+        return array(
+            'facebook' => !empty ($instance ['social_info']['facebook']) ? $instance ['social_info']['facebook'] : "https://www.facebook.com/",
+            'youtube' => !empty ($instance ['social_info']['youtube']) ? $instance ['social_info']['youtube'] : "https://youtube.com/",
+            'gg_plus' => !empty ($instance ['social_info']['gg_plus']) ? $instance ['social_info']['gg_plus'] : "https://plus.google.com",
+        );
     }
 }
 
