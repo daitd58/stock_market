@@ -50,8 +50,12 @@
                         margin-top: 30px;
                     }
                     li{
+                        margin: 0;
                         a{
-                            //text-transform: uppercase !important;
+                            &:hover {
+                                background-color: $primary-color;
+                                color: #fff;
+                            }
                         }
                     }
                 }
@@ -123,4 +127,8 @@ body #mega-menu-wrap-header #mega-menu-header > li.mega-menu-item-has-children >
             height: auto;
         }
     }
+}
+
+#mega-menu-wrap-header #mega-menu-header > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
+
 }
