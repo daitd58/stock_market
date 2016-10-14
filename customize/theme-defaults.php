@@ -111,7 +111,7 @@ $stock_market_wp_defaults['stock_market_wp_custom_css'] = '';
 
 #stock_market_wp_footer_section
 $stock_market_wp_defaults['stock_market_wp_footer_credit_message'] = __('All rights reserved.', 'stock_market');
-$stock_market_wp_defaults['stock_market_wp_footer_copyright_message'] = get_bloginfo('name') . ' ' . date("Y") .'. ';
+$stock_market_wp_defaults['stock_market_wp_footer_copyright_message'] = 'PhoenixStock ' . date("Y") .'. ';
 
 
 /*** default/example images ***/
