@@ -93,8 +93,8 @@
             <div class="entry-related">
                 <h2 class="title">Bài viết liên quan</h2>
                 <?php
-                $related = get_posts( array( 'category__in' => wp_get_post_categories(get_the_ID()), 'numberposts' => 5, 'post__not_in' => array(get_the_ID()) ) );
-                if( $related ) foreach( $related as $post ) {
+                $related = get_posts(array('category__in' => wp_get_post_categories(get_the_ID()), 'numberposts' => 5, 'post__not_in' => array(get_the_ID())));
+                if ($related) foreach ($related as $post) {
                     setup_postdata($post); ?>
                     <ul>
                         <li>
@@ -104,7 +104,10 @@
                             </a>
                         </li>
                     </ul>
-                <?php }
+                <?php } else { ?>
+                    <li><p><i>Không tìm thấy bài viết nào!</i></p></li>
+                <?php
+                }
                 wp_reset_postdata(); ?>
             </div>
             <!--  /Post Related  -->
