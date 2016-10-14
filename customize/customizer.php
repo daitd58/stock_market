@@ -276,11 +276,13 @@ function stock_market_wp_customize_register( $wp_customize ) {
                                     'section' => 'stock_market_wp_footer_section',
                                     'type' => 'textarea', 
                                     'description' => __('Displayed as the copyright notice at the bottom of the page. Accepts HTML.', 'stock_market') ));
-    $wp_customize->add_setting( 'stock_market_wp_footer_logo', array( 'default' => '', 'capability' => 'edit_theme_options', 'type' => 'option', ) );
-    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'stock_market_wp_footer_logo', array(
-        'label' => __('Footer Logo', 'stock_market'),
-        'section' => 'stock_market_wp_footer_section',
-        'description' => __('Displayed as the footer logo.', 'stock_market') )));
+    $wp_customize->add_setting( 'stock_market_wp_footer_logo' );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'stock_market_wp_footer_logo', array(
+        'label'    => __( 'Footer Logo', 'stock_markt' ),
+        'section'  => 'stock_market_wp_footer_section',
+        'settings' => 'stock_market_wp_footer_logo',
+    ) ) );
     
     //$wp_customize->remove_section('colors');
     //$wp_customize->remove_section('background_image');
