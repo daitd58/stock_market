@@ -1,4 +1,5 @@
 .post-content {
+
 	.post-details {
 
 		font-size: $text-size;
@@ -15,7 +16,7 @@
 	}
 
 	.entry-title {
-		line-height: 1.2;
+		line-height: 1.2 !important;
 		color: $primary-color;
 		font-size: 30px;
 	}
@@ -37,9 +38,7 @@
 		ul, li {
 			list-style: none;
 		}
-		ul {
-			padding-left: 0;
-		}
+
 		a {
 			i {
 				padding-right: 10px;
