@@ -28,7 +28,9 @@
 					<td>
 						<?php echo $repeater_item['gia-thi-truong']; ?>
 					</td>
-					<td><?php echo $repeater_item['lai-lo']; ?></td>
+					<td class="<?php if($repeater_item['lai-lo']['type'] == 'lai'){echo 'lai';} else echo 'lo'?>" >
+						<b><?php echo $repeater_item['lai-lo']['value']; ?></b>
+					</td>
 					<td><?php echo $repeater_item['ti-trong']; ?></td>
 				</tr>
 				<?php

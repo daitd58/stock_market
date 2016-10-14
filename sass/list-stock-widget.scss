@@ -19,6 +19,12 @@
         }
         tbody{
             tr.list-stock-row{
+                .lai{
+                    color: green;
+                }
+                .lo{
+                    color: red;
+                }
                 &:hover{
                     cursor: pointer;
                     background-color: rgba(1,190,190, 0.15);
