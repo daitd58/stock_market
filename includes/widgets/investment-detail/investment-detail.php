@@ -69,7 +69,6 @@ class Investment_Detail_Widget extends SiteOrigin_Widget {
 						),
 					)
 				)
-
 			),
 
 			//The $base_folder path string.

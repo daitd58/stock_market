@@ -1,0 +1,30 @@
+.list-stock{
+    table{
+        tr.list-stock-row{
+            position: relative;
+            height: 50px;
+            td, th{
+                padding: 15px;
+                height: 50px;
+            }
+            .stt{
+                max-width: 80px;
+                text-align: center;
+            }
+            .view-more{
+                background: $primary-color;
+                color: #fff;
+                padding: 15px 30px;
+            }
+        }
+        tbody{
+            tr.list-stock-row{
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgba(1,190,190, 0.15);
+
+                }
+            }
+        }
+    }
+}

@@ -5,9 +5,11 @@
 (function ($) {
     var label = [];
     var data = [];
+    var colors = [];
     for (var i = 0; i < pie_data.length; i++) {
         label[i] = pie_data[i].title;
         data[i] = pie_data[i].percent;
+        colors[i] = pie_data[i].color;
     }
     var ctx = document.getElementById('pieChart');
     var myPieChart = new Chart(ctx, {
@@ -17,16 +19,8 @@
             datasets: [
                 {
                     data: data,
-                    backgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ],
-                    hoverBackgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ]
+                    backgroundColor: colors,
+                    hoverBackgroundColor: colors
                 }
             ]
         },
@@ -47,7 +41,10 @@
                 }
             },
             responsive: true,
-            maintainAspectRatio: true
+            maintainAspectRatio: true,
+            legend: {
+                position: 'bottom'
+            }
         }
     });
 })(jQuery)
