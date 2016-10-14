@@ -39,16 +39,6 @@
 
                     <!-- /Post Thumnail -->
                     <div class="entry-post">
-                        <!-- Post Title -->
-                        <?php $title = get_the_title(); ?>
-                        <?php if ($title == '') { ?>
-                            <h2 class="entry-title"><?php echo _e('Post ID: ', 'stock_market');
-                                echo get_the_ID(); ?></h2>
-                        <?php } else { ?>
-                            <h2 class="entry-title"><?php the_title(); ?></h2>
-                        <?php } ?>
-                        <!-- /Post Title -->
-
                         <?php
                         $stock_market_wp_post_meta = stock_market_wp_get_option('stock_market_wp_post_meta');
                         if ($stock_market_wp_post_meta == 'Y') {

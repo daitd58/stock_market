@@ -35,6 +35,9 @@
 	}
 
 	.entry-related {
+		ul, li {
+			list-style: none;
+		}
 
 		a {
 			i {
@@ -48,16 +51,5 @@
 		}
 	}
 
-	ul, li {
-		list-style: none;
-	}
-	ul {
-		padding-left: 0;
-	}
-	li::before {
-		content: '\f00c';
-		font-family: FontAwesome;
-		color: $primary-color;
-		padding-right: 5px;
-	}
+
 }

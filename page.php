@@ -16,17 +16,6 @@
         <div class="container">
 
             <div id="page-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
-
-                <!-- Post Title -->
-                <?php $title = get_the_title(); ?>
-                <?php if ($title == '') { ?>
-                    <h3 class="page-title"><?php echo _e('Post ID: ', 'stock_market');
-                        echo get_the_ID(); ?></h3>
-                <?php } else { ?>
-                    <h3 class="page-title"><?php the_title() ?></h3>
-                <?php } ?>
-                <!-- /Post Title -->
-
                 <div class="page-content">
                     <?php
                     $stock_market_wp_post_featured_image = stock_market_wp_get_option('stock_market_wp_post_featured_image');
