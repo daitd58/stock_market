@@ -33,7 +33,7 @@
                         var tooltipData = allData[tooltipItem.index];
                         var total = 0;
                         for (var i in allData) {
-                            total += parseInt(allData[i]);
+                            total += parseFloat(allData[i]);
                         }
                         var tooltipPercentage = Math.round((tooltipData / total) * 10000) / 100;
                         return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
