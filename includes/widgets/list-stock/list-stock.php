@@ -52,7 +52,7 @@ class List_Stock_Widget extends SiteOrigin_Widget {
 							'fallback' => true
 						),
 						'stt' => array(
-							'type'  => 'text',
+							'type'  => 'number',
 							'label' => __( 'STT:', 'stock-market' )
 						),
 						'ma-chung-khoan' => array(
@@ -62,15 +62,15 @@ class List_Stock_Widget extends SiteOrigin_Widget {
 						'gia-mua-binh-quan' => array(
 							'type'  => 'text',
 							'label' => __( 'Giá mua bình quân:', 'stock-market' ),
-							'description' => __('Chín nghìn VND nhập: 9000')
+							'description' => __('Chín nghìn VND nhập: 9,000')
 						),
 						'gia-thi-truong' => array(
 							'type'  => 'text',
 							'label' => __( 'Giá thị trường:', 'stock-market' ),
-							'description' => __('Chín nghìn VND nhập: 9000')
+							'description' => __('Chín nghìn VND nhập: 9,000')
 						),
 						'lai-lo' => array(
-							'type'  => 'text',
+							'type'  => 'number',
 							'label' => __( 'Lãi/lỗ (%):', 'stock-market' ),
 							'description' => __('9 phần trăm nhập: 9')
 						),

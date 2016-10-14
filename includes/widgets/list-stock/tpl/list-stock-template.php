@@ -4,8 +4,8 @@
 		<tr class="list-stock-row">
 			<th class="stt">STT</th>
 			<th>Mã chứng khoán</th>
-			<th>Giá mua bình quân</th>
-			<th>Giá thị trường</th>
+			<th>Giá mua bình quân (VNĐ)</th>
+			<th>Giá thị trường (VNĐ)</th>
 			<th>Lãi/lỗ (%)</th>
 			<th>Tỉ trọng</th>
 		</tr>
