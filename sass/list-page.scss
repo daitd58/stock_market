@@ -1,15 +1,16 @@
 .list-page {
 	ul li a{
 		font-size: 20px;
-		color: black;
+		color: $primary-color;
+		text-transform: capitalize;
 		&:before {
 			font-size: 20px !important;
-			color: black !important;
+			color: $primary-color !important;
 		}
 	}
 	a:hover{
 		&:before, & {
-			color: $primary-color !important;
+			color: #019e9e !important;
 			transition: 0.5s;
 		}
 	}
