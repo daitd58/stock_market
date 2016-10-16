@@ -168,15 +168,6 @@ add_action( 'customize_controls_enqueue_scripts', 'stock_market_wp_custom_custom
 ### WIDGETS ###
 
 function stock_market_wp_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'stock_market' ),
-		'id'            => 'sidebar',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'stock_market' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
     register_sidebar( array(
 		'name'          => __( 'Footer Col 1', 'stock_market' ),
 		'id'            => 'footer_1',
@@ -195,24 +186,7 @@ function stock_market_wp_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
-    register_sidebar( array(
-		'name'          => __( 'Footer Col 3', 'stock_market' ),
-		'id'            => 'footer_3',
-		'description'   => __( 'Add widgets here to appear in the third column of the footer.', 'stock_market' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-    register_sidebar( array(
-		'name'          => __( 'Footer Col 4', 'stock_market' ),
-		'id'            => 'footer_4',
-		'description'   => __( 'Add widgets here to appear in the fourth column of the footer.', 'stock_market' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
+
 }
 add_action( 'widgets_init', 'stock_market_wp_widgets_init' );
 
@@ -414,17 +388,11 @@ function stock_market_wp_example_sidebar_footer(){
     echo '<div class="footer-widgets bg-grey-light-3">';
     echo '<div class="container">';
     echo '<div class="row">';
-    echo '<div class="col-md-3 footer-widget footer-widget-col-1">';
+    echo '<div class="col-md-6 col-xs-6 footer-widget footer-widget-col-1">';
     the_widget('WP_Widget_Pages', 'title=' . __('Pages', 'stock_market') , 'before_title=<h3 class="widget-title">&after_title=</h3>&before_widget=<div class="widget">&after_widget=</div>');
     echo '</div>';
-    echo '<div class="col-md-3 footer-widget footer-widget-col-2">';
+    echo '<div class="col-md-6 col-xs-6 footer-widget footer-widget-col-2">';
     the_widget('WP_Widget_Recent_Posts', 'title=' . __('Recent Posts', 'stock_market') , 'before_title=<h3 class="widget-title">&after_title=</h3>&before_widget=<div class="widget">&after_widget=</div>');
-    echo '</div>';
-    echo '<div class="col-md-3 footer-widget footer-widget-col-3">';
-    the_widget('WP_Widget_Categories', 'title=' . __('Categories', 'stock_market') , 'before_title=<h3 class="widget-title">&after_title=</h3>&before_widget=<div class="widget">&after_widget=</div>');
-    echo '</div>';
-    echo '<div class="col-md-3 footer-widget footer-widget-col-3">';
-    the_widget( 'WP_Widget_Meta', 'title=' . __('Meta', 'stock_market') , 'before_title=<h3 class="widget-title">&after_title=</h3>&before_widget=<div class="widget">&after_widget=</div>');
     echo '</div>';
     echo '</div></div></div>';
 }
@@ -435,8 +403,6 @@ function stock_market_wp_example_sidebar(){
     the_widget('WP_Widget_Search');
     the_widget('WP_Widget_Pages', 'title=' . __('Pages', 'stock_market') , 'before_title=<h3 class="widget-title">&after_title=</h3>&before_widget=<div class="widget">&after_widget=</div>');
     the_widget('WP_Widget_Recent_Posts', 'title=' . __('Recent Posts', 'stock_market') , 'before_title=<h3 class="widget-title">&after_title=</h3>&before_widget=<div class="widget">&after_widget=</div>');
-    the_widget( 'WP_Widget_Archives', 'title=' . __('Archives', 'stock_market'), 'before_title=<h3 class="widget-title">&after_title=</h3>&before_widget=<div class="widget">&after_widget=</div>');
-    the_widget( 'WP_Widget_Categories', 'title=' . __('Categories', 'stock_market'), 'before_title=<h3 class="widget-title">&after_title=</h3>&before_widget=<div class="widget">&after_widget=</div>');
     echo '</div>';
 }
 

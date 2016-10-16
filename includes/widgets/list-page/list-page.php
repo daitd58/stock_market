@@ -1,13 +1,13 @@
 <?php
 
 /*
-Widget Name: Stock Market: Our Work
-Description: A widget to list most recent company works
+Widget Name: List Page
+Description: A widget to list sub pages of current page
 Author: Hien Doan
 */
 
 
-class Stock_Market_Our_Work extends SiteOrigin_Widget
+class List_Page extends SiteOrigin_Widget
 {
 
     function __construct()
@@ -17,15 +17,15 @@ class Stock_Market_Our_Work extends SiteOrigin_Widget
         //Call the parent constructor with the required arguments.
         parent::__construct(
         // The unique id for your widget.
-            'stock-market-our-work',
+            'list-page',
 
             // The name of the widget for display purposes.
-            __('Stock Market: Our Work', 'stock-market'),
+            __('List Page', 'stock-market'),
 
             // The $widget_options array, which is passed through to WP_Widget.
             // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
             array(
-                'description' => __('Footer: Những dự án hiện tại của công ty', 'stock-market'),
+                'description' => __('List Page: Liệt kê các sub page của trang hiện tại', 'stock-market'),
                 'panels_groups' => array('stock-market')
             ),
 
@@ -33,13 +33,7 @@ class Stock_Market_Our_Work extends SiteOrigin_Widget
             array(),
 
             //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
-            array(
-                'heading' => array(
-                    'type' => 'text',
-                    'label' => __('Tiêu đề:', 'stock-market'),
-                    'default' => __('Công việc của chúng tôi', 'stock-market'),
-                )
-            ),
+            array(),
 
             //The $base_folder path string.
             plugin_dir_path(__FILE__)
@@ -48,7 +42,7 @@ class Stock_Market_Our_Work extends SiteOrigin_Widget
 
     function get_template_name($instance)
     {
-        return 'our-work-template';
+        return 'list-page-template';
     }
 
     function get_style_name($instance)
@@ -57,4 +51,4 @@ class Stock_Market_Our_Work extends SiteOrigin_Widget
     }
 }
 
-siteorigin_widget_register('stock-market-our-work', __FILE__, 'Stock_Market_Our_Work');
+siteorigin_widget_register('list-page', __FILE__, 'List_Page');

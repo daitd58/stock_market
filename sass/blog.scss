@@ -9,7 +9,7 @@
 			margin-top: 50px;
 		}
 		h2 {
-			text-align: center;
+			text-align: left;
 			font-size: 30px;
 			margin: 0 auto;
 		}
@@ -57,15 +57,13 @@
 	}
 
 	.entry-meta {
-		text-align: center;
+		text-align: left;
 		.author {
 			text-transform: uppercase;
 		}
 		margin-bottom: 30px;
 	}
 	.paginate-link {
-		float: right;
-		padding-top: 50px;
 		padding-bottom: 50px;
 		font-size: 14px;
 		text-align: center;
@@ -88,5 +86,19 @@
 				color: white;
 			}
 		}
+	}
+	@media screen and (max-width: 768px){
+		.post .entry-thumbnail {
+			float: none;
+			margin-right: 0;
+			margin-bottom: 20px;
+			img {
+				width: 100%;
+			}
+		}
+		.post .entry-buttons{
+			margin-top: 20px;
+		}
+
 	}
 }

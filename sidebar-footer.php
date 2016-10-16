@@ -11,7 +11,7 @@
 <?php 
 if($stock_market_hide_footer_widgets == 'N') { 
 
-if ( is_active_sidebar( 'footer_1' ) || is_active_sidebar( 'footer_2' ) || is_active_sidebar( 'footer_3' ) || is_active_sidebar( 'footer_4' ) ) { ?>
+if ( is_active_sidebar( 'footer_1' ) || is_active_sidebar( 'footer_2' )) { ?>
 <!-- ========== Footer Widgets ========== -->
 <div class="footer-widgets bg-footer">
     <div class="container">
@@ -20,8 +20,6 @@ if ( is_active_sidebar( 'footer_1' ) || is_active_sidebar( 'footer_2' ) || is_ac
             $i=0;
             if(is_active_sidebar( 'footer_1' )) $i++;
             if(is_active_sidebar( 'footer_2' )) $i++;
-            if(is_active_sidebar( 'footer_3' )) $i++;
-            if(is_active_sidebar( 'footer_4' )) $i++;
             $class = stock_market_wp_get_col_class($i);
             ?>
             <?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
@@ -38,22 +36,6 @@ if ( is_active_sidebar( 'footer_1' ) || is_active_sidebar( 'footer_2' ) || is_ac
                 <?php dynamic_sidebar( 'footer_2' ); ?>
             </div>
             <!-- /Footer Col 2 -->
-            <?php endif; ?>
-            
-            <?php if ( is_active_sidebar( 'footer_3' ) ) : ?>
-            <!-- Footer Col 3 -->
-            <div class="<?php echo $class ?> footer-widget footer-widget-col-3 wow" >
-                <?php dynamic_sidebar( 'footer_3' ); ?>
-            </div>
-            <!-- /Footer Col 3 -->
-            <?php endif; ?>
-            
-            <?php if ( is_active_sidebar( 'footer_4' ) ) : ?>
-            <!-- Footer Col 4 -->
-            <div class="<?php echo $class ?> footer-widget footer-widget-col-4 wow" >
-                <?php dynamic_sidebar( 'footer_4' ); ?>
-            </div>
-            <!-- /Footer Col 4 -->
             <?php endif; ?>
             
         </div>

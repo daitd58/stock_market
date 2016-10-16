@@ -4,7 +4,7 @@
 (function ($) {
     $(document).ready(function() {
         $(".list-stock-row").click(function() {
-            window.document.location = $(this).data("href");
+            window.open($(this).data("href"), '_blank');
         });
     });
 })(jQuery);

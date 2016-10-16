@@ -1,0 +1,16 @@
+.list-page {
+	ul li a{
+		font-size: 20px;
+		color: black;
+		&:before {
+			font-size: 20px !important;
+			color: black !important;
+		}
+	}
+	a:hover{
+		&:before, & {
+			color: $primary-color !important;
+			transition: 0.5s;
+		}
+	}
+}
