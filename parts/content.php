@@ -92,7 +92,7 @@ $stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp
     <!-- Post Buttons -->
     <div class="entry-buttons entry-buttons-right">
         <a href="<?php the_permalink(); ?>"
-           class="btn btn-primary-custom"><?php _e('Đọc tiếp', 'stock_market'); ?></a>
+           class="btn btn-primary-custom"><?php _e('Đọc thêm', 'stock_market'); ?></a>
     </div>
     <!-- /Post Buttons -->
 </div>
