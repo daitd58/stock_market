@@ -3,7 +3,7 @@
  */
 (function ($) {
     $(document).ready(function() {
-        $(".list-stock-row").click(function() {
+        $("tbody .list-stock-row").click(function() {
             window.open($(this).data("href"), '_blank');
         });
     });
