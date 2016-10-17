@@ -33,7 +33,8 @@
 						<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
 					</div>
 					<div class="post-info">
-						<?php stock_entry_post_info(); ?>
+						<b><?php _e('Ngày đăng: ', 'stock_market'); ?></b>
+						<?php echo get_the_date("d/m/Y"); ?>
 					</div>
 					<p class="content">
 						<?php echo substr( get_the_excerpt(), 0, 250 ); ?> ...
