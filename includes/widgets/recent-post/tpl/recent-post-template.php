@@ -18,7 +18,7 @@
 						<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
 					</div>
 					<a href="<?php the_permalink() ?>">
-						<?php if ( has_post_thumbnail() ) : $img = wp_get_attachment_image_src( get_post_thumbnail_id() ); ?>
+						<?php if ( has_post_thumbnail() ) : $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
 							<img src="<?php echo sow_esc_url( $img[0] ) ?>">
 						<?php else : ?>
 							<img
