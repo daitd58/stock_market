@@ -57,12 +57,7 @@ $stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp
     <?php } ?>
     <div class="entry-meta">
         <b><?php _e('Ngày đăng: ', 'stock_market'); ?></b>
-        <?php echo get_the_date("d/m/Y"); ?> |
-        <b><?php _e('Thể loại: ', 'stock_market'); ?></b>
-        <?php echo get_the_category_list(', '); ?> |
-        <b><?php _e('Đăng bởi: ', 'stock_market') ?></b>
-        <a class="author" href="<?php the_author_link() ?>"><?php the_author() ?></a>
-
+        <?php echo get_the_date("d/m/Y"); ?>s
     </div>
     <!-- /Post Meta -->
 
