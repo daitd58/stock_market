@@ -56,7 +56,8 @@ $stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp
 
     <?php } ?>
     <div class="entry-meta">
-        <?php stock_entry_post_info() ?>
+        <b><?php _e('Ngày đăng: ', 'stock_market'); ?></b>
+        <?php echo get_the_date("d/m/Y"); ?>
     </div>
     <!-- /Post Meta -->
 
@@ -77,6 +78,7 @@ $stock_market_wp_blog_feed_buttons = stock_market_wp_get_option('stock_market_wp
 
         <div class="entry-content-right">
             <?php echo substr( get_the_excerpt(), 0, 250 ); ?> ...
+            <?php wp_link_pages(); ?>
         </div>
         <!-- /Small Image Left, Excerpt Right -->
 
