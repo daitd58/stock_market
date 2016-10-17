@@ -36,7 +36,8 @@ class Recent_Post_Widget extends SiteOrigin_Widget {
 				'quantity' => array(
 					'type' => 'number',
 					'label' => __( 'Quantity of Post.', 'stock-market' ),
-					'default' => 5
+					'default' => 5,
+					'description' => __('Default is 5 post.')
 				)
 			),
 

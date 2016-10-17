@@ -9,7 +9,9 @@
 <div class="recent-post-widget">
 	<div class="row">
 		<?php
-		query_posts( array( 'orderby' => 'date', 'posts_per_page' => $instance['quantity'] ) );
+		$amount = isset($instance['quantity']) ? $instance['quantity'] : 5;
+		query_posts( array( 'orderby' => 'date', 'posts_per_page' => $amount ) );
+		
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 			?>
 			<div class="post">
