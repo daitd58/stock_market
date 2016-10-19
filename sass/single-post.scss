@@ -1,18 +1,19 @@
-.post-content {
+.single-post {
 	.section {
-		padding-top: 50px;
+		padding-top: 20px !important;
 	}
 	.post-details {
+
 		font-size: $text-size;
 		text-align: justify;
 
 		.entry-thumbnail {
 			@media screen and (max-width: 767px) {
 				.entry-image img {
-					max-width: 150px;
+					width: 100% !important;
 				}
-				margin-left: 10px;
-				margin-bottom: 10px;
+				float: none;
+				margin: 0;
 			}
 			margin-left: 40px;
 			float: right;
