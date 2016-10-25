@@ -4,7 +4,7 @@
 
 (function ($) {
     $(document).ready(function () {
-        $.getJSON( baseUrl + '/wp-content/themes/stock_market/jsonp.php?filename=data.json&callback=?', function (data) {
+        $.getJSON( baseUrl + '/wp-content/themes/stock_market/jsonp.php?filename=data.csv&callback=?', function (data) {
             var first = data[0];
             var firstDate = moment(first[0]);
             var last = data[data.length - 1];
@@ -120,7 +120,7 @@
             });
         });
 
-        $.getJSON( baseUrl + '/wp-content/themes/stock_market/jsonp.php?filename=data_compare.json&callback=?', function (data) {
+        $.getJSON( baseUrl + '/wp-content/themes/stock_market/jsonp.php?filename=data_compare.csv&callback=?', function (data) {
             var data1 = [];
             var data2 = [];
             for (i = 0; i < data.length; i++) {
