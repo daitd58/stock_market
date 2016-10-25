@@ -36,7 +36,7 @@
                             total += parseFloat(allData[i]);
                         }
                         var tooltipPercentage = Math.round((tooltipData / total) * 10000) / 100;
-                        return tooltipLabel + ': ' + tooltipData + ' (' + tooltipPercentage + '%)';
+                        return tooltipLabel + ': ' + tooltipPercentage + '%';
                     }
                 }
             },
