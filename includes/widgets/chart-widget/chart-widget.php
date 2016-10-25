@@ -1,10 +1,12 @@
 <?php
-/*
-Widget Name: Chart Widget
-Description: A powerful yet simple button widget for your sidebars or Page Builder pages.
-Author: SiteOrigin
-Author URI: https://siteorigin.com
-*/
+/**
+ * Widget Name: Stock Market: Chart Widget
+ * Description: Chart Widget
+ * Author: daitd
+ * Author URI:
+ * Widget URI:
+ * Video URI:
+ **/
 
 if (!class_exists('SiteOrigin_Widget'))
     return;
