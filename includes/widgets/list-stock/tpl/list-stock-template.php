@@ -1,4 +1,4 @@
-<div class="list-stock">
+<div class="list-stock table-responsive">
 	<table class="table table-bordered table-hover">
 		<thead>
 		<tr class="list-stock-row">
