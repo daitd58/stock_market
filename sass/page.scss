@@ -1,16 +1,15 @@
 .page {
 	font-size: $text-size;
-	//.page-title {
-	//	font-size: $title-size;
-	//	color: $primary-color;
-	//	line-height: 1.2 !important;
-	//}
+	.section {
+		padding-top: 50px !important;
+	}
 	.page-content {
 		text-align: justify;
 		.page-thumbnail {
 			@media screen and (max-width: 767px) {
 				margin-left: 0;
 				margin-bottom: 20px;
+				margin-top: -30px;
 				float: none;
 				.page-image img {
 					width: 100% !important;
