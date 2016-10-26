@@ -130,3 +130,7 @@ body #mega-menu-wrap-header #mega-menu-header > li.mega-menu-item-has-children >
 #mega-menu-wrap-header #mega-menu-header > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
 
 }
+
+#mega-menu-wrap-header .mega-menu-toggle .mega-toggle-block-1:after {
+    display: none;
+}
