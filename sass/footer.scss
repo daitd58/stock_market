@@ -59,6 +59,9 @@
 			width: 40px;
 			height: 40px;
 			text-align: center;
+			&:hover {
+				transition: 0.7s;
+			}
 			&.fa-facebook:hover {
 				border-color: #3b5998;
 				background-color: #3b5998;
@@ -70,6 +73,29 @@
 			&.fa-youtube:hover{
 				border-color: #b00;
 				background-color: #b00;
+			}
+
+			&.fa-tumblr:hover {
+				border-color: #36465d;
+				background-color: #36465d;
+			}
+			&.fa-rss:hover {
+				border-color: #f36f24;
+				background-color: #f36f24;
+			}
+
+			&.fa-twitter:hover {
+				border-color: #00aced;
+				background-color: #00aced;
+			}
+
+			&.fa-linkedin:hover {
+				border-color: #0177b5;
+				background-color: #0177b5;
+			}
+			&.fa-pinterest:hover {
+				border-color: #bd081c;
+				background-color: #bd081c;
 			}
 		}
 	}

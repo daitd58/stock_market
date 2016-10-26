@@ -41,7 +41,7 @@ class Stock_Market_Footer_Info extends SiteOrigin_Widget
                 ),
                 'social_info' => array(
                     'type' => 'section',
-                    'label' => __('Mạng xã hội', 'stock-market'),
+                    'label' => __('Địa chỉ mạng xã hội', 'stock-market'),
                     'hide' => true,
                     'fields' => array(
                         'facebook' => array(
@@ -55,6 +55,26 @@ class Stock_Market_Footer_Info extends SiteOrigin_Widget
                         'google-plus' => array(
                             'type' => 'text',
                             'label' => __('Địa chỉ Google Plus', 'stock-market')
+                        ),
+                        'twitter' => array(
+                            'type' => 'text',
+                            'label' => __('Địa chỉ Twitter', 'stock-market')
+                        ),
+                        'linked-in' => array(
+                            'type' => 'text',
+                            'label' => __('Địa chỉ Linked In', 'stock-market')
+                        ),
+                        'pinterest' => array(
+                            'type' => 'text',
+                            'label' => __('Địa chỉ Pinterest', 'stock-market')
+                        ),
+                        'tumblr' => array(
+                            'type' => 'text',
+                            'label' => __('Địa chỉ Tumblr', 'stock-market')
+                        ),
+                        'rss' => array(
+                            'type' => 'text',
+                            'label' => __('Địa chỉ RSS', 'stock-market')
                         ),
                     )
                 )
@@ -73,14 +93,6 @@ class Stock_Market_Footer_Info extends SiteOrigin_Widget
     function get_style_name($instance)
     {
         return false;
-    }
-    function get_template_variables($instance, $args)
-    {
-        return array(
-            'facebook' => !empty ($instance ['social_info']['facebook']) ? $instance ['social_info']['facebook'] : "https://www.facebook.com/",
-            'youtube' => !empty ($instance ['social_info']['youtube']) ? $instance ['social_info']['youtube'] : "https://youtube.com/",
-            'gg_plus' => !empty ($instance ['social_info']['gg_plus']) ? $instance ['social_info']['gg_plus'] : "https://plus.google.com",
-        );
     }
 }
 

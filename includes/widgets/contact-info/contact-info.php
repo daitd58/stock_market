@@ -72,18 +72,6 @@ class Stock_Market_Contact_Info extends SiteOrigin_Widget
     {
         return false;
     }
-
-    function get_template_variables($instance, $args)
-    {
-        return array(
-            'heading' => !empty ($instance ['heading']) ? $instance ['heading'] : "Thông tin liên",
-            'contact_phone' => !empty ($instance ['contact_info']['phone']) ? $instance ['contact_info']['phone'] : "0944.323.118 [Mr. Khương] - 0906217163 [Mr. Đức]",
-            'contact_email' => !empty ($instance ['contact_info']['email']) ? $instance ['contact_info']['email'] : "contact@phoenixstock.com",
-            'facebook' => !empty ($instance ['social_info']['facebook']) ? $instance ['social_info']['facebook'] : "https://www.facebook.com/",
-            'youtube' => !empty ($instance ['social_info']['youtube']) ? $instance ['social_info']['youtube'] : "https://youtube.com/",
-            'gg_plus' => !empty ($instance ['social_info']['gg_plus']) ? $instance ['social_info']['gg_plus'] : "https://plus.google.com",
-        );
-    }
 }
 
 siteorigin_widget_register('stock-market-contact-info', __FILE__, 'Stock_Market_Contact_Info');
