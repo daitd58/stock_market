@@ -156,6 +156,12 @@ function stock_market_wp_custom_css() {
 }
 add_action('wp_head','stock_market_wp_custom_css');
 
+### Admin CSS ###
+
+function stock_market_wp_admin_css() {
+    wp_enqueue_style('admin-style', STOCK_MARKET_URI. 'assets/css/admin.css');
+}
+add_action('admin_enqueue_scripts', 'stock_market_wp_admin_css');
 
 ### CUSTOMIZER STYLES ("Upgrade to Pro") ###
 

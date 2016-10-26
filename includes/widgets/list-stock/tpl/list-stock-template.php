@@ -1,11 +1,11 @@
-<div class="list-stock">
+<div class="list-stock table-responsive">
 	<table class="table table-bordered table-hover">
 		<thead>
 		<tr class="list-stock-row">
 			<th class="stt">STT</th>
 			<th>Mã chứng khoán</th>
-			<th>Giá mua bình quân (VNĐ)</th>
-			<th>Giá thị trường (VNĐ)</th>
+			<th>Giá mua bình quân (nghìn VNĐ)</th>
+			<th>Giá thị trường (nghìn VNĐ)</th>
 			<th>Lãi/lỗ (%)</th>
 			<th>Tỉ trọng</th>
 		</tr>

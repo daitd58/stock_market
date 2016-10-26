@@ -49,6 +49,6 @@
 //			wp_reset_postdata();
 			wp_reset_query();?>
 		<?php endif; ?>
+		<div class="show-blog"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">>><?php echo esc_html__('Xem toàn bộ', 'stock_market'); ?><<</a></div>
 	</div>
 </div>
-
