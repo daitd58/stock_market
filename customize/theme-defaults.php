@@ -12,7 +12,7 @@ $stock_market_wp_defaults['stock_market_hide_footer_widgets'] = 'N';
 #stock_market_wp_logo_section
 $stock_market_wp_defaults['stock_market_wp_show_logo_image'] = 'N';
 $stock_market_wp_defaults['stock_market_wp_logo_image'] = '';
-$stock_market_wp_defaults['stock_market_wp_logo_text'] = get_bloginfo('name');;
+$stock_market_wp_defaults['stock_market_wp_logo_text'] = get_bloginfo('name');
 
 #stock_market_wp_colors_section
 $stock_market_wp_defaults['stock_market_wp_color_stylesheet'] = 'Orange';
@@ -111,7 +111,7 @@ $stock_market_wp_defaults['stock_market_wp_custom_css'] = '';
 
 #stock_market_wp_footer_section
 $stock_market_wp_defaults['stock_market_wp_footer_credit_message'] = __('All rights reserved.', 'stock_market');
-$stock_market_wp_defaults['stock_market_wp_footer_copyright_message'] = bloginfo('name') .' '. date("Y") .'. ';
+$stock_market_wp_defaults['stock_market_wp_footer_copyright_message'] = get_bloginfo('name') .' '. date("Y") .'. ';
 
 
 /*** default/example images ***/
