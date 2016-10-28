@@ -8,7 +8,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html lang="en">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,7 +18,7 @@
 	<?php endif; ?>
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body>
     
     <!-- ========== Navbar ========== -->
     <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
