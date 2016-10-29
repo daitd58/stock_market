@@ -34,11 +34,6 @@ class Stock_Market_Footer_Info extends SiteOrigin_Widget
 
             //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
             array(
-                'content' => array(
-                    'type' => 'text',
-                    'label' => __('Nội dung:', 'stock-market'),
-                    'default' => __('Đây là đoạn mô tả hiển ngắn hiển thị ở footer.', 'stock-market'),
-                ),
                 'social_info' => array(
                     'type' => 'section',
                     'label' => __('Địa chỉ mạng xã hội', 'stock-market'),
