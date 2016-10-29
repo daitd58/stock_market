@@ -6,7 +6,7 @@
 		if ( ! empty( $instance['investment'] ) ) {
 			$repeater_items = $instance['investment'];
 			foreach ( $repeater_items as $index => $repeater_item ) {
-				$src_image = wp_get_attachment_image_src( $repeater_item['featured_image'], array( '300' ) );
+				$src_image = wp_get_attachment_image_src( $repeater_item['featured_image'] );
 				$src_file  = wp_get_attachment_url( $repeater_item['file'] );
 				?>
 				<li class="inv-item col-md-3 col-sm-4 col-xs-12">

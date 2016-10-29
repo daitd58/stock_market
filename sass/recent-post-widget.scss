@@ -1,6 +1,13 @@
 .recent-post-widget {
     .post {
         margin-bottom: 50px;
+        a{
+            color: $primary-color;
+            &:hover{
+                color: $hover-color;
+                text-decoration: none;
+            }
+        }
         .post-thumbnail {
             .post-title-mobile-screen{
                 margin-bottom: 15px;

@@ -6,6 +6,9 @@
  * Time: 4:10 PM
  */
 
+### Aqua resize
+require_once 'aq_resizer.php';
+
 // Siteorigin include widget folder
 function stock_market_widgets($folders)
 {
