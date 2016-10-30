@@ -24,7 +24,7 @@
 							<img src="<?php echo sow_esc_url( $img[0] ) ?>">
 						<?php else : ?>
 							<img
-								src="<?php echo get_template_directory_uri() . '/assets/img/default-post-thumbnail.png' ?>">
+								src="<?php echo get_template_directory_uri() . '/assets/img/image-default.png' ?>">
 						<?php endif; ?>
 					</a>
 				</div>
